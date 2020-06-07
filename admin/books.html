@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rcffutmx Admin Dashboard - upload a book</title>
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- OWL COURASEL CSS -->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="../css/owl.theme.default.min.css"> -->
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+        <div class="logo">
+            <h1><a href="#">Admin Dashboard</a></h1>
+        </div>
+        <div class="logout" id="toplog">
+            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                Logout</a>
+        </div>
+        <div class="nav-icon">
+            <img src="../img/menu.svg" alt="menu icon" width="30px" height="30px">
+        </div>
+</div>
+
+<!-- THE SIDE NAVGATION BAR -->
+<div class="side-nav">
+    <ul>
+        <li><a href="dashboard.html "><i class="fa fa-home" aria-hidden="true"></i>
+            Dashboard</a></li>
+        <li><a href="meesage.html"><i class="fa fa-comment" aria-hidden="true"></i>
+            Messages</a></li>
+        <li><a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>
+            Announcement</a></li>
+        <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>
+            Books</a></li>
+        <li><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i>
+            Gallery</a></li>
+        <li><a href="#"><i class="fa fa-commenting" aria-hidden="true"></i>
+            Testimonies</a></li>
+        <li id="sidelog"><a href="#">Logout</a></li>
+    </ul>
+</div>
+
+
+    <!-- THE BOOK UPLOAD FORM -->
+    <div class="book">
+        <h2>Upload a book</h2>
+        <form action="" id="form">
+            <div class="input-box">
+                <input type="text" name="author" required>
+                <span>Title</span>
+            </div>
+            <div class="input-box">
+                <input type="text" name="title" required>
+                <span>Author</span>
+            </div>
+            <div class="input-box">
+                <label for="book">Upload book file</label>
+                <input type="file" name="book" required>
+            </div>
+            <button type="submit">Upload book</button>
+        </form>
+    </div>
+
+    <div class="all-data">
+        <table id="data">
+            <tr>
+                <th>S/N</th>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

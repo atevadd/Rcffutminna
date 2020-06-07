@@ -1,0 +1,80 @@
+// STATUS BAR
+.status-bar {
+  width: 100%;
+  background-color: $dark-bg-color;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+//   box-shadow: 0 6px 13px 0 #4e4e4e;
+
+  .nav-icon {
+    display: none;
+  }
+
+  .logo {
+    h1 {
+      font-size: 1.8rem;
+      padding: 0 0 0 15px;
+      color: $light-color;
+
+      a {
+        color: $light-color;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .logout {
+    padding: 0 20px 0 0;
+
+    a {
+      color: $light-color;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// NAVIAGTION BAR
+.side-nav {
+  position: fixed;
+  height: 100%;
+  top: 69px;
+  width: 20%;
+  overflow-x: hidden;
+  background-color: $dark-bg-color;
+  border-top: 1px solid #aaaaaa;
+
+  ul {
+    list-style: none;
+    margin-top: 30px;
+
+    li {
+      display: block;
+      padding: 25px 0 25px 30px;
+      font-size: 20px;
+
+      a {
+        color: $light-color;
+        display: block;
+
+        i{
+            padding: 0 5px;
+        }
+      }
+    }
+    li#sidelog {
+      display: none;
+    }
+    li:hover {
+      background-color: $primary-color;
+    }
+  }
+}

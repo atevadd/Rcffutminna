@@ -1,0 +1,26 @@
+@import 'admin/color';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "nunito", sans-serif;
+}
+
+body{
+    background-color: $bg-color;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+@import 'admin/nav';
+@import 'admin/dashboard';
+@import 'admin/message';
+@import 'admin/books';
