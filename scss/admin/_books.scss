@@ -84,7 +84,7 @@
       border-radius: 4px;
       outline: none;
       border: none;
-      color: $light-color;
+      color: $dark-color;
       background-color: $primary-color;
       font-size: 17px;
       transition: all 100ms ease-out;
@@ -107,7 +107,7 @@
 
       th {
         background-color: $primary-color;
-        color: $light-color;
+        color: $dark-color;
       }
       td,
       th,

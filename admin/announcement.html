@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a announcement for everyone - Admin Dashboard RCFfutminnna</title>
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+    
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+        <div class="logo">
+            <h1><a href="#">Admin Dashboard</a></h1>
+        </div>
+        <div class="logout" id="toplog">
+            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+        </div>
+        <div class="nav-icon">
+            <img src="../img/menu.svg" alt="menu icon" width="30px" height="30px" />
+        </div>
+    </div>
+
+    <!-- THE SIDE NAVGATION BAR -->
+    <div class="side-nav">
+        <ul>
+            <li>
+                <a href="dashboard.html "><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="meesage.html"><i class="fa fa-comment" aria-hidden="true"></i> Messages</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i> Announcement</a>
+            </li>
+            <li>
+                <a href="books.html"><i class="fa fa-book" aria-hidden="true"></i> Books</a>
+            </li>
+            <li>
+                <a href="gallery.html"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a>
+            </li>
+            <li>
+                <a href="testimony.html"><i class="fa fa-commenting" aria-hidden="true"></i> Testimonies</a>
+            </li>
+            <li id="sidelog"><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+
+    <!-- THE ANNOUNCEMENT FOROM STARTS HERE -->
+    <div class="announcement">
+        <h2>Broadcast here</h2>
+
+            <form action="" class="form">
+                <div class="input-box">
+                    <label for="">Category</label>
+                    <select name="announce" required> 
+                        <option value="Brother's Forum">Brother's Forum</option>
+                        <option value="Sister's forum">Sister's Forum</option>
+                        <option value="Genreal">General</option>
+                        <option value="Special Event">Special Event</option>
+                    </select>
+                </div>
+                <div class="input-box date">
+                    <label for="">Date</label>
+                    <input type="date" name="update" required>
+                </div>
+                    <div class="input-box">
+                        <label for="">Headline</label>
+                        <input type="text" name="headline" required>
+    
+                    </div>
+                    <div class="input-box">
+                        <Label>Content</Label>
+                        <textarea name="content" cols="30" rows="5" placeholder="Content" required></textarea>
+                    </div>
+                    <button type="submit">Upload announcement</button>
+            </form>
+
+
+            <!-- THE LIST OF ALL THE ANNOUNCEMENT-->
+        <div class="all-data">
+            <table id="data">
+                <tr>
+                    <th>S/N</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Headline</th>
+                    <th>Content</th>
+                    <th>controls</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Brother's forum</td>
+                    <td>02/07/2020</td>
+                    <td>Prayer meeting</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, vero! Illo, optio praesentium eaque repudiandae </td>
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <br>
+                        <a href="#" class="del">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Brother's forum</td>
+                    <td>02/07/2020</td>
+                    <td>Prayer meeting</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, vero! Illo, optio praesentium eaque repudiandae </td>
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <br>
+                        <a href="#" class="del">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Brother's forum</td>
+                    <td>02/07/2020</td>
+                    <td>Prayer meeting</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, vero! Illo, optio praesentium eaque repudiandae </td>
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <br>
+                        <a href="#" class="del">Delete</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -98,8 +98,8 @@
       font-size: 17px;
     }
     button:hover{
-        box-shadow: 0 3px 13px 0 #b1b1b1;
-    }
+      box-shadow: 0 3px 13px 0 #b1b1b1;
+  }
   }
 
   .all-data {
@@ -115,7 +115,7 @@
 
       th {
         background-color: $primary-color;
-        color: $light-color;
+        color: $dark-color;
       }
       td,
       th,

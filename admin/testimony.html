@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Upload books here - RCFfutminna Admin Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimony - admin dashboard RCFfutminn</title>
+
     <!-- FONT AWESOME CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="../css/admin.css" />
 </head>
-
 <body>
-    <!-- STATUS BAR -->
-    <div class="status-bar">
+     <!-- STATUS BAR -->
+     <div class="status-bar">
         <div class="logo">
             <h1><a href="#">Admin Dashboard</a></h1>
         </div>
@@ -50,40 +49,37 @@
         </ul>
     </div>
 
-    <!-- THE BOOK UPLOAD FORM -->
-    <div class="book">
-        <h2>Upload a book</h2>
-        <form action="" id="form">
+
+    <!-- THE TESTIMONY FORM -->
+    <div class="testimony">
+        <h2>Testimony</h2>
+
+        <form action="" class="form">
             <div class="input-box">
-                <input type="text" name="author" required />
-                <span>Title</span>
+                <label for="">Name</label>
+                <input type="text" name="NOT" required>
             </div>
             <div class="input-box">
-                <input type="text" name="title" required />
-                <span>Author</span>
+                <label for="">Testimony</label>
+                <textarea name="testi" id="" cols="30" rows="10"></textarea>
             </div>
-            <div class="input-box">
-                <label for="book">Book here</label>
-                <input type="file" name="book" required />
-            </div>
-            <button type="submit">Upload book</button>
+            <button type="submit">Upload testimony</button>
         </form>
 
-        <!-- THE LIST OF ALL THE BOOKS-->
-        <div class="all-data">
+         <!-- THE LIST OF ALL THE BOOKS-->
+         <div class="all-data">
             <table id="data">
                 <tr>
                     <th>S/N</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Book file</th>
+                    <th>Name</th>
+                    <th>Testimony</th>
+                    
                     <th>Controls</th>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>Rich dad poor dad</td>
                     <td>Robert Kiyosaki</td>
-                    <td><a href="#" id="file">Rich-dad-poor-dad.pdf</a></td>
                     <td>
                         <a href="#" class="edit">Edit</a>
                         <a href="#" class="del">Delete</a>
@@ -93,5 +89,4 @@
         </div>
     </div>
 </body>
-
 </html>
