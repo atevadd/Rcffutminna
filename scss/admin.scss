@@ -13,6 +13,13 @@ body{
 a{
     text-decoration: none;
 }
+a:active{
+    background-color: $primary-color !important;
+}
+a:visited{
+    background-color: $primary-color !important;
+}
+
 
 .container{
     width: 85%;
