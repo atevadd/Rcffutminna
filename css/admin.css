@@ -637,6 +637,11 @@ a:visited {
   border: 2px solid #3c5ceb;
 }
 
+.announcement .form .input-box input[type="file"] {
+  border: none;
+  padding: 0;
+}
+
 .announcement .form .input-box span {
   position: absolute;
   left: 15px;
@@ -701,12 +706,14 @@ a:visited {
 .announcement .all-data table tr {
   border: 1px solid #757575;
   padding: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: auto;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+}
+
+.announcement .all-data table td:nth-child(3) {
+  width: auto;
 }
 
 .announcement .all-data table td a.edit {
@@ -714,10 +721,13 @@ a:visited {
   border-radius: 4px;
   background-color: #3c5ceb;
   color: #f4f4f4;
+  display: inline-block;
 }
 
 .announcement .all-data table td a.del {
   padding: 8px 25px;
+  margin: 20px 0 0 0;
+  display: inline-block;
   border-radius: 4px;
   background-color: #eb3c62;
   color: #f4f4f4;
