@@ -11,38 +11,58 @@
 
 </head>
 <body>
-        <!-- STATUS BAR -->
-    <div class="status-bar">
-            <div class="logo">
-                <h1><a href="#">Admin Dashboard</a></h1>
-            </div>
-            <div class="logout" id="toplog">
-                <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>
-                    Logout</a>
-            </div>
-            <div class="nav-icon">
-                <img src="../img/menu.svg" alt="menu icon" width="30px" height="30px">
-            </div>
-    </div>
-    
-    <!-- THE SIDE NAVGATION BAR -->
-    <div class="side-nav">
+       <!-- STATUS BAR -->
+       <div class="status-bar">
+        <div class="logo">
+          <h1><a href="#">Admin Dashboard</a></h1>
+        </div>
+        <div class="logout" id="toplog">
+          <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+        </div>
+        <div class="nav-icon" id="menu">
+          <span><i class="fa fa-bars"></i></span>
+        </div>
+      </div>
+  
+      <!-- THE SIDE NAVGATION BAR -->
+      <div class="side-nav" id="side-nav">
+          <a href="#" class="closebtn" id="sidenav"><i class="fa fa-times"></i></a>
         <ul>
-            <li><a href="dashboard.html"><i class="fa fa-home" aria-hidden="true"></i>
-                Dashboard</a></li>
-            <li><a href="message.html"><i class="fa fa-comment" aria-hidden="true"></i>
-                Messages</a></li>
-            <li><a href="#"><i class="fa fa-bullhorn" aria-hidden="true"></i>
-                Announcement</a></li>
-            <li><a href="books.html"><i class="fa fa-book" aria-hidden="true"></i>
-                Books</a></li>
-            <li><a href="gallery.html"><i class="fa fa-picture-o" aria-hidden="true"></i>
-                Gallery</a></li>
-            <li><a href="testimony.html"><i class="fa fa-commenting" aria-hidden="true"></i>
-                Testimonies</a></li>
-            <li id="sidelog"><a href="#">Logout</a></li>
+          <li>
+            <a href="index.html "
+              ><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="message.html"
+              ><i class="fa fa-comment" aria-hidden="true"></i> Messages</a
+            >
+          </li>
+          <li>
+            <a href="announcement.html"
+              ><i class="fa fa-bullhorn" aria-hidden="true"></i> Announcement</a
+            >
+          </li>
+          <li>
+            <a href="books.html"
+              ><i class="fa fa-book" aria-hidden="true"></i> Books</a
+            >
+          </li>
+          <li>
+            <a href="gallery.html"
+              ><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a
+            >
+          </li>
+          <li>
+            <a href="testimony.html"
+              ><i class="fa fa-commenting" aria-hidden="true"></i> Testimonies</a
+            >
+          </li>
+          <li id="sidelog">
+            <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+          </li>
         </ul>
-    </div>
+      </div>
 
 
     <div class="wrapper">
@@ -118,12 +138,6 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script>
-       $(document).ready(function(){
-           $(".owl-carousel").owlCarousel();
-         });
-    </script>
+<script src="../js/script.js"></script>
 </body>
 </html>

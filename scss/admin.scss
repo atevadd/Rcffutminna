@@ -16,9 +16,9 @@ a{
 a:active{
     background-color: $primary-color !important;
 }
-a:visited{
-    background-color: $primary-color !important;
-}
+// a:visited{
+//     background-color: $primary-color !important;
+// }
 
 .container{
     width: 85%;
@@ -27,7 +27,7 @@ a:visited{
 
 
 @import 'admin/nav';
-@import 'admin/dashboard';
+@import 'admin/index';
 @import 'admin/message';
 @import 'admin/books';
 @import 'admin/gallery';

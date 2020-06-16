@@ -122,3 +122,52 @@
         }
       }
 }
+
+
+// MOBILE SCREEN
+@media screen and (max-width: 768px){
+  .announcement{
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    padding: 20px 0;
+
+    h2{
+      padding: 0 0 0 20px;
+    }
+    .form{
+      width: 90%;
+      margin: 0 auto;
+    }
+    .all-data{
+      width: 90%;
+      margin: 60px auto 20px;
+      overflow: auto;
+
+      table{
+        width: 100%;
+
+        tr, td,th{
+          height: 100%;
+        }
+        td{
+          a.edit {
+            padding: 8px 25px;
+            border-radius: 4px;
+            background-color: #3c5ceb;
+            color: $light-color;
+            display: inline-block;
+          }
+          a.del {
+            padding: 8px 25px;
+            margin: 10px 0 0 0;
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #eb3c62;
+            color: $light-color;
+          }
+        }
+      }
+    } 
+  }
+}

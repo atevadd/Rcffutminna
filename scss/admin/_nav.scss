@@ -52,6 +52,9 @@
   background-color: $dark-bg-color;
   border-top: 1px solid #aaaaaa;
 
+  a.closebtn{
+    display: none;
+  }
   ul {
     list-style: none;
     margin-top: 30px;
@@ -76,6 +79,67 @@
     }
     li:hover {
       background-color: $primary-color;
+    }
+  }
+}
+
+
+//MOBILE VERSION
+@media screen and (max-width: 768px){
+
+  .status-bar{
+    padding: 15px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    .logo{
+      h1{
+        font-size: 25px;
+      }
+    }
+    .logout{
+      display: none;
+
+    }
+    .nav-icon{
+      display: block;
+
+      span{
+        font-size: 30px;
+        color: #fff;
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+  
+  .side-nav{
+    width: 0%; //75%
+    z-index: 99;
+    top: 70px;
+    opacity: 1;
+    overflow-y: scroll;
+    transition: all 400ms ease-out;
+
+    a.closebtn{
+     display: block;
+      outline: none;
+      border: none;
+      font-size: 35px;
+      margin: 0 20px 0 0;
+      // margin: 10px;
+      float: right;
+      color: #fff;
+      background: none;
+    }
+
+    ul{
+      clear: both;
+      transition: all 200ms ease-out;
+      padding-bottom: 40px;
+
+      li#sidelog{
+        display: block;
+      }
     }
   }
 }
