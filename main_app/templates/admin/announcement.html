@@ -1,0 +1,57 @@
+{% extends 'admin/base.html' %}
+{% block content%}
+    <!-- THE ANNOUNCEMENT FOROM STARTS HERE -->
+    <div class="announcement">
+        <h2>Broadcast here</h2>
+
+            <form action="" method="POST" enctype="multipart/form-data" class="form">
+                <div class="input-box">
+                    <label for="">Category</label>
+                    <select name="announce" required> 
+                        <option value="Brother's Forum">Brother's Forum</option>
+                        <option value="Sister's forum">Sister's Forum</option>
+                        <option value="Genreal">General</option>
+                        <option value="Special Event">Special Event</option>
+                    </select>
+                </div>
+                <div class="input-box date">
+                    <label for="">Image here</label>
+                    <input type="file" name="imganounc">
+                </div>
+                    <div class="input-box">
+                        <Label>Announcement here</Label>
+                        <textarea name="content" cols="30" rows="5" placeholder="Content" required></textarea>
+                    </div>
+                    <button type="submit">Upload announcement</button>
+            </form>
+
+
+            <!-- THE LIST OF ALL THE ANNOUNCEMENT-->
+        <div class="all-data">
+            <table id="data">
+                <tr>
+                    <th>S/N</th>
+                    <th>Category</th>
+                    <th>Content</th>
+                    <th>controls</th>
+                </tr>
+                {%if announcements%}
+                {% for announcement in announcements%}
+                <tr>
+                    <td>{{announcement.id}}</td>
+                    <td>{{announcement.annouce}}</td>
+                    <td>{{announcement.content}}</td>
+                    <td>
+                        <a href="{{url_for('edit_announcement', id=announcement.id)}}" class="edit">Edit</a>
+                        <br>
+                        <a href="{{url_for('delete_announcement', id=announcement.id)}}" class="del">Delete</a>
+                    </td>
+                </tr>
+                {%endfor%}
+                {% else %}
+                    <h1>No Announcements Right Now.</h1>
+                {%endif%}
+            </table>
+        </div>
+    </div>
+{% endblock %}

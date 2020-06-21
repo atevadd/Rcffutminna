@@ -1,0 +1,31 @@
+{% extends 'admin/base.html' %}
+{% block content%}
+    <!-- THE ANNOUNCEMENT FOROM STARTS HERE -->
+    <div class="announcement">
+        <h2>Edit Annnouncement</h2>
+
+            <form action="" method="POST" enctype="multipart/form-data" class="form">
+                <div class="input-box">
+                    <label for="">Category</label>
+                    <select name="announce" required> 
+                        <option value="Brother's Forum">Brother's Forum</option>
+                        <option value="Sister's forum">Sister's Forum</option>
+                        <option value="General">General</option>
+                        <option value="Special Event">Special Event</option>
+                    </select>
+                </div>
+                <div class="input-box date">
+                    <label for="">Image here</label>
+                    <input type="file" name="imganounc">
+                </div>
+                    <div class="input-box">
+                        <Label>Announcement here</Label>
+                        <textarea name="content" cols="30" rows="5" placeholder="Content" required>{{announcement.content}}</textarea>
+                    </div>
+                    <button type="submit">Edit announcement</button>
+            </form>
+
+
+            <!-- THE LIST OF ALL THE ANNOUNCEMENT-->
+    </div>
+{% endblock %}

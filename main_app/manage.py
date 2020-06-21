@@ -2,10 +2,10 @@ from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 
 #configirations
-from backend.config.config import app, db
+from main_app import app, db
 
 #models
-from backend.models.user import User
+from main_app.models import Message
 
 
 #setting up migrations
