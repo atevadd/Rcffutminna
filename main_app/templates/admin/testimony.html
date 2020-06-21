@@ -1,0 +1,40 @@
+{% extends 'admin/base.html' %}
+{% block content %}
+    <!-- THE TESTIMONY FORM -->
+    <div class="testimony">
+      <h2>Testimony</h2>
+
+      <form action="" class="form">
+        <div class="input-box">
+          <label for="">Name</label>
+          <input type="text" name="NOT" required />
+        </div>
+        <div class="input-box">
+          <label for="">Testimony</label>
+          <textarea name="testi" id="" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit">Upload testimony</button>
+      </form>
+
+      <!-- THE LIST OF ALL THE BOOKS-->
+      <div class="all-data">
+        <table id="data">
+          <tr>
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Testimony</th>
+            <th>Controls</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Rich dad poor dad</td>
+            <td>Robert Kiyosaki</td>
+            <td>
+              <a href="#" class="edit">Edit</a>
+              <a href="#" class="del">Delete</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+{% endblock content %}

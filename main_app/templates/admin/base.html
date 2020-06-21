@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the admin dashboard - RCFfutminna</title>
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/admin.css')}}">
+
+</head>
+
+<body>
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+        <div class="logo">
+            <h1><a href="{{url_for('index')}}">Admin Dashboard</a></h1>
+        </div>
+        <div class="logout" id="toplog">
+            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+        </div>
+        <div class="nav-icon" id="menu">
+            <span><i class="fa fa-bars"></i></span>
+        </div>
+    </div>
+
+    <!-- THE SIDE NAVGATION BAR -->
+    <div class="side-nav" id="side-nav">
+        <a href="#" class="closebtn" id="sidenav"><i class="fa fa-times"></i></a>
+        <ul>
+            <li>
+                <a href="{{url_for('index')}}"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a
+                >
+            </li>
+            <li>
+                <a href="{{url_for('messages')}}"
+                ><i class="fa fa-comment" aria-hidden="true"></i> Messages</a
+                >
+            </li>
+            <li>
+                <a href="{{url_for('announcement')}}"
+                ><i class="fa fa-bullhorn" aria-hidden="true"></i> Announcement</a
+                >
+            </li>
+            <li>
+                <a href="{{url_for('books')}}"
+                ><i class="fa fa-book" aria-hidden="true"></i> Books</a
+                >
+            </li>
+            <li>
+                <a href="{{url_for('gallery')}}"
+                ><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a
+                >
+            </li>
+            <li>
+                <a href="{{url_for('testimony')}}"
+                ><i class="fa fa-commenting" aria-hidden="true"></i> Testimonies</a
+                >
+            </li>
+            <li id="sidelog">
+                <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+            </li>
+        </ul>
+    </div>
+<!-- flash messages-->
+{%with messages = get_flashed_messages(with_categories=True)%} 
+    {%if messages%} 
+        {%for category, message in messages%}
+            <div class="alert alert-{{category}}" style="text-align: center;">
+                {{message}}
+            </div>
+        {%endfor%} 
+    {%endif%} 
+{%endwith%} 
+
+
+    {%block content%}{%endblock%}
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+
+</html>

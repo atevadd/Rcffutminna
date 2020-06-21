@@ -1,0 +1,50 @@
+{% extends 'admin/base.html' %}
+{% block content%}
+    <!-- THE GALLERY FORM -->
+    <div class="gallery">
+        <h2>Upload picture</h2>
+        <form action="" class="form">
+            <div class="input-box">
+                <label for="image file">Image file here</label>
+                <input type="file" name="image" multiple>
+            </div>
+            <div class="input-box">
+                <label for="">Tag</label>
+                <select name="tag" required>
+                    <option value="Sunday service">Sunday service</option>
+                    <option value="Thanksgiving service">Thanksgiving service</option>
+                    <option value="Thanksgiving service">FYB Sunday</option>
+                    <option value="Thanksgiving service">Freshers week </option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="image file">Date</label>
+                <input type="date" name="image">
+            </div>
+            <button type="submit">Upload picture</button>
+        </form>
+
+        <!-- THE LIST OF ALL THE BOOKS-->
+        <div class="all-data">
+            <table id="data">
+                <tr>
+                    <th>S/N</th>
+                    <th>Image</th>
+                    <th>Tag</th>
+                    <th>Date</th>
+                    <th>Control</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>img-20032-2003-22.jpg</td>
+                    <td>Sunday service</td>
+                    <td>02/04/2020</td>
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <a href="#" class="del">Delete</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock %}
