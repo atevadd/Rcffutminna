@@ -52,3 +52,21 @@ class Announcement(db.Model):
     def remove_from_database(self) -> None:
         db.session.delete(self)
         db.session.commit()
+
+#testimony model
+class Testimony(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    testimony = db.Column(db.Text)
+    
+    @classmethod
+    def find_by_id(cls, id:int):
+        return cls.query.filter_by(id=id).first()
+    
+    def save_to_database(self) -> None:
+        db.session.add(self)
+        db.session.commit()
+    
+    def remove_from_database(self) -> None:
+        db.session.delete(self)
+        db.session.commit()
