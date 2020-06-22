@@ -3,7 +3,7 @@ import secrets
 from datetime import datetime
 from flask import render_template, url_for, redirect, request,flash
 from main_app import app, db
-from main_app.models import Message, Announcement, Testimony, Book
+from main_app.models import Message, Announcement, Testimony, Book, Gallery
 
 
 #middleware - save audiofiles
@@ -117,9 +117,16 @@ def delete_book(id):
     flash("Book Deleted Successfully","danger")
     return redirect(url_for('books'))
 
-@app.route('/admin/gallery')
+@app.route('/admin/gallery', methods=['GET','POST'])
 def gallery():
-    return render_template('admin/gallery.html')
+    galleries = Gallery.query.all()
+    if request.method == "POST":
+        image = save_img(request.files['image'])
+        new_gallery = Gallery(tag=request.form['tag'],image=image)
+        new_gallery.save_to_database()
+        flash("Gallery Added Sucessfully", "success")
+        return redirect(url_for('gallery'))
+    return render_template('admin/gallery.html', galleries=galleries)
 
 @app.route('/admin/messages', methods=['GET','POST'])
 def messages():

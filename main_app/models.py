@@ -97,6 +97,7 @@ class Book(db.Model):
 class Gallery(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     tag = db.Column(db.String(50), nullable=False)
+    image = db.Column(db.String(50), default="default.jpg")
     date = db.Column(db.DateTime, default=datetime.utcnow)
     
     @classmethod
