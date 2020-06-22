@@ -97,6 +97,7 @@ class Book(db.Model):
 class Gallery(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     tag = db.Column(db.String(50), nullable=False)
+    date = db.Column(db.DateTime, default=datetime.utcnow)
     
     @classmethod
     def find_by_id(cls, id:int):
