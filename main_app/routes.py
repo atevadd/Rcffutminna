@@ -23,6 +23,15 @@ def save_img(img):
     img.save(picture_path)
     return picture_fn
 
+#middleware - save books/pdf files
+def save_book(book):
+    random_hex = secrets.token_hex(8)
+    _, f_ext = os.path.splitext(book.filename)
+    book_fn = random_hex + f_ext
+    book_path = os.path.join(app.root_path, 'static/book', book_fn)
+    book.save(book_path)
+    return book_fn
+
 #dashboard routes
 @app.route("/")
 def index():
