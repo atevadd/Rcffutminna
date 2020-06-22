@@ -29,6 +29,12 @@
     color: #a94442;
 }
 
+@media screen and (max-width: 480px) {
+    .alert {
+        width: 80%;
+    }
+}
+
 body {
     background-color: #fff;
 }
