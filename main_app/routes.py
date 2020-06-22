@@ -3,7 +3,7 @@ import secrets
 from datetime import datetime
 from flask import render_template, url_for, redirect, request,flash
 from main_app import app, db
-from main_app.models import Message, Announcement
+from main_app.models import Message, Announcement, Testimony
 
 
 #middleware - save audiofiles
@@ -123,7 +123,30 @@ def delete_message(id):
     flash("Message Deleted Successfully","danger")
     return redirect(url_for('messages'))
 
-@app.route('/admin/testimonies')
+@app.route('/admin/testimonies', methods=['GET', 'POST'])
 def testimony():
-    return render_template('admin/testimony.html')
+    testimonies = Testimony.query.all()
+    if request.method == "POST":
+        testimony = Testimony(name=request.form['name'], testimony=request.form['testi'])
+        testimony.save_to_database()
+        flash("Testimony added successfully", "success")
+        return redirect(url_for('testimony'))
+    return render_template('admin/testimony.html', testimonies=testimonies)
 
+@app.route('/admin/testimonies/<int:id>/edit', methods=['GET','POST'])
+def edit_testimony(id):
+    testimony = Testimony.find_by_id(id)
+    if request.method == "POST":
+        testimony.name = request.form['name']
+        testimony.testimony = request.form['testi']
+        db.session.commit()
+        flash('Testimony Updated', "success")
+        return redirect(url_for('testimony'))
+    return render_template('admin/edit_testimony.html', testimony=testimony)
+
+@app.route('/admin/testimonies/<int:id>/delete')
+def delete_testimony(id):
+    testimony = Testimony.find_by_id(id)
+    testimony.remove_from_database()
+    flash("Testimony Deleted Successfully","danger")
+    return redirect(url_for('testimony'))

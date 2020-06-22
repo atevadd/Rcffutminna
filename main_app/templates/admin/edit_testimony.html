@@ -1,0 +1,21 @@
+{% extends 'admin/base.html' %}
+{% block content %}
+    <!-- THE TESTIMONY FORM -->
+    <div class="testimony">
+      <h2>Edit Testimony</h2>
+
+      <form action="" method="POST" class="form">
+        <div class="input-box">
+          <label for="">Name</label>
+          <input type="text" value="{{testimony.name}}" name="name" required />
+        </div>
+        <div class="input-box">
+          <label for="">Testimony</label>
+          <textarea name="testi"  id="" cols="30" rows="10">{{testimony.testimony}}</textarea>
+        </div>
+        <button type="submit">Edit</button>
+      </form>
+
+      <!-- THE LIST OF ALL THE BOOKS-->
+    </div>
+{% endblock content %}
