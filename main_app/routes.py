@@ -124,9 +124,36 @@ def gallery():
         image = save_img(request.files['image'])
         new_gallery = Gallery(tag=request.form['tag'],image=image)
         new_gallery.save_to_database()
-        flash("Gallery Added Sucessfully", "success")
+        flash("Picture Added Sucessfully", "success")
         return redirect(url_for('gallery'))
     return render_template('admin/gallery.html', galleries=galleries)
+
+@app.route('/admin/gallery/<int:id>/edit', methods=['GET','POST'])
+def edit_gallery(id):
+    gallery = Gallery.find_by_id(id)
+    if request.method == "POST":
+        if request.form['tag'] and request.files['image']:
+            os.remove(app.root_path + url_for('static', filename="church_img/"+gallery.image))
+            image = save_img(request.files['image'])
+            gallery.tag = request.form['tag']
+            gallery.image = image
+            db.session.commit()
+            flash('Picture Updated', "success")
+            return redirect(url_for('gallery'))
+        elif request.form['tag']:
+            gallery.tag = request.form['tag']
+            db.session.commit()
+            flash('Picture Updated', "success")
+            return redirect(url_for('gallery'))
+    return render_template('admin/edit_gallery.html', gallery=gallery)
+
+@app.route('/admin/gallery/<int:id>/delete')
+def delete_gallery(id):
+    gallery = Gallery.find_by_id(id)
+    os.remove(app.root_path + url_for('static', filename="church_img/"+gallery.image))
+    gallery.remove_from_database()
+    flash("Gallery Deleted Successfully","danger")
+    return redirect(url_for('gallery'))
 
 @app.route('/admin/messages', methods=['GET','POST'])
 def messages():
