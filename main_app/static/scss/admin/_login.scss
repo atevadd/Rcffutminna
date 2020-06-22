@@ -1,0 +1,78 @@
+.login-form {
+  width: 30%;
+  height: 400px;
+  margin: 7% auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  // background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+
+  @media (max-width: 990px) {
+    width: 90%;
+    padding: 20px 20px;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 2.1rem;
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-weight: 500;
+
+    @media (max-width: 990px) {
+      font-size: 1.7rem;
+      margin-top: 20px;
+    }
+  }
+
+  .input-box {
+    width: 100%;
+    position: relative;
+    margin: 30px 0 0 0;
+
+    input {
+      position: relative;
+      width: 100%;
+      height: 35px;
+    //   padding-left: 15px;
+      border: none;
+      background: none;
+      border-bottom: 2px solid #ccc;
+      transition: all 300ms ease-out;
+      z-index: 99;
+    }
+    label {
+      display: inline-block;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      transition: all 300ms ease-out;
+      color: lighten($color: #333333, $amount: 20);
+      z-index: -1;
+    }
+    input:focus ~ label {
+      color: #002cfa;
+    }
+    input:focus {
+      border-bottom: 2px solid #002cfa;
+    }
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -11px;
+      font-size: 13px;
+    }
+  }
+  button {
+    display: block;
+    width: 100%;
+    margin: 40px 0 0 0;
+    padding: 10px 35px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: #002cfa;
+    color: #fff;
+    border-radius: 4px;
+  }
+}
