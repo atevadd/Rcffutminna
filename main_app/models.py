@@ -1,5 +1,10 @@
-from main_app import db
+from main_app import db, login_manager, UserMixin
 from datetime import datetime
+
+
+@login_manager.user_loader
+def admin(id):
+    return User.query.get(int(id))
 
 #message model
 class Message(db.Model):
@@ -113,10 +118,10 @@ class Gallery(db.Model):
         db.session.commit()
 
 #ADMIN USER MODEL
-class User(db.Model):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), nullable=False)
-    username = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(50), nullable=False)
     
     def save_to_database(self) -> None:
         db.session.add(self)

@@ -19,7 +19,7 @@
             <h1><a href="{{url_for('index')}}">Admin Dashboard</a></h1>
         </div>
         <div class="logout" id="toplog">
-            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            <a href="{{url_for('logout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </div>
         <div class="nav-icon" id="menu">
             <span><i class="fa fa-bars"></i></span>
@@ -60,7 +60,7 @@
                 >
             </li>
             <li id="sidelog">
-                <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+                <a href="{{url_for('logout')}}"><i class="fa fa-sign-out"></i> Logout</a>
             </li>
         </ul>
     </div>

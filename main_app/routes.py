@@ -2,8 +2,8 @@ import os
 import secrets
 from datetime import datetime
 from flask import render_template, url_for, redirect, request,flash
-from main_app import app, db
-from main_app.models import Message, Announcement, Testimony, Book, Gallery
+from main_app import app, db, current_user,login_user, logout_user,login_required
+from main_app.models import Message, Announcement, Testimony, Book, Gallery, User
 
 
 #middleware - save audiofiles
@@ -35,10 +35,14 @@ def save_book(book):
 
 #dashboard routes
 @app.route("/")
+@login_required
 def index():
-    return render_template("admin/index.html")
+    galleries = Gallery.query.order_by(Gallery.id.desc()).limit(3).all()
+    messages = Message.query.order_by(Message.id.desc()).limit(3).all()
+    return render_template("admin/index.html", messages=messages, galleries=galleries)
 
 @app.route("/admin/announcement", methods=['GET','POST'])
+@login_required
 def announcement():
     announcements = Announcement.query.all()
     if request.method == "POST":
@@ -50,6 +54,7 @@ def announcement():
     return render_template('admin/announcement.html', announcements=announcements)
 
 @app.route('/admin/announcement/<int:id>/edit', methods=['GET','POST'])
+@login_required
 def edit_announcement(id):
     announcement = Announcement.find_by_id(id)
     if request.method == "POST":
@@ -70,6 +75,7 @@ def edit_announcement(id):
     return render_template('admin/edit_announcement.html', announcement=announcement)
 
 @app.route('/admin/announcement/<int:id>/delete')
+@login_required
 def delete_announcement(id):
     announce = Announcement.find_by_id(id)
     os.remove(app.root_path + url_for('static', filename="church_img/"+announce.image))
@@ -78,6 +84,7 @@ def delete_announcement(id):
     return redirect(url_for('announcement'))
 
 @app.route('/admin/books', methods=['GET','POST'])
+@login_required
 def books():
     books = Book.query.all()
     if request.method == "POST":
@@ -89,6 +96,7 @@ def books():
     return render_template('admin/books.html', books=books)
 
 @app.route('/admin/books/<int:id>/edit', methods=['GET','POST'])
+@login_required
 def edit_book(id):
     book = Book.find_by_id(id)
     if request.method == "POST":
@@ -109,6 +117,7 @@ def edit_book(id):
     return render_template('admin/edit_book.html', book=book)
 
 @app.route('/admin/books/<int:id>/delete')
+@login_required
 def delete_book(id):
     book = Book.find_by_id(id)
     os.remove(app.root_path + url_for('static', filename="books/"+book.name))
@@ -118,6 +127,7 @@ def delete_book(id):
     return redirect(url_for('books'))
 
 @app.route('/admin/gallery', methods=['GET','POST'])
+@login_required
 def gallery():
     galleries = Gallery.query.all()
     if request.method == "POST":
@@ -129,6 +139,7 @@ def gallery():
     return render_template('admin/gallery.html', galleries=galleries)
 
 @app.route('/admin/gallery/<int:id>/edit', methods=['GET','POST'])
+@login_required
 def edit_gallery(id):
     gallery = Gallery.find_by_id(id)
     if request.method == "POST":
@@ -148,6 +159,7 @@ def edit_gallery(id):
     return render_template('admin/edit_gallery.html', gallery=gallery)
 
 @app.route('/admin/gallery/<int:id>/delete')
+@login_required
 def delete_gallery(id):
     gallery = Gallery.find_by_id(id)
     os.remove(app.root_path + url_for('static', filename="church_img/"+gallery.image))
@@ -156,6 +168,7 @@ def delete_gallery(id):
     return redirect(url_for('gallery'))
 
 @app.route('/admin/messages', methods=['GET','POST'])
+@login_required
 def messages():
     messages = Message.query.all()
     if request.method == "POST":
@@ -174,6 +187,7 @@ def messages():
     return render_template('admin/message.html', messages=messages)
 
 @app.route('/admin/messages/<int:id>/edit', methods=['GET','POST'])
+@login_required
 def edit_message(id):
     message = Message.find_by_id(id)
     print(message.audio)
@@ -199,6 +213,7 @@ def edit_message(id):
     return render_template('admin/edit_message.html', message=message)
 
 @app.route('/admin/messages/<int:id>/delete')
+@login_required
 def delete_message(id):
     message = Message.find_by_id(id)
     os.remove(app.root_path + url_for('static', filename="message_audios/"+message.audio))
@@ -207,6 +222,7 @@ def delete_message(id):
     return redirect(url_for('messages'))
 
 @app.route('/admin/testimonies', methods=['GET', 'POST'])
+@login_required
 def testimony():
     testimonies = Testimony.query.all()
     if request.method == "POST":
@@ -217,6 +233,7 @@ def testimony():
     return render_template('admin/testimony.html', testimonies=testimonies)
 
 @app.route('/admin/testimonies/<int:id>/edit', methods=['GET','POST'])
+@login_required
 def edit_testimony(id):
     testimony = Testimony.find_by_id(id)
     if request.method == "POST":
@@ -228,8 +245,30 @@ def edit_testimony(id):
     return render_template('admin/edit_testimony.html', testimony=testimony)
 
 @app.route('/admin/testimonies/<int:id>/delete')
+@login_required
 def delete_testimony(id):
     testimony = Testimony.find_by_id(id)
     testimony.remove_from_database()
     flash("Testimony Deleted Successfully","danger")
     return redirect(url_for('testimony'))
+
+@app.route('/admin/login', methods=['GET','POST'])
+def login():
+    if request.method == "POST":
+        user = User.query.filter_by(username="arinze").first()
+        if request.form['username'] == user.username and request.form['password'] == user.password:
+            login_user(user)
+            next_page = request.args.get('next')
+            flash("Login Successfull", "success")
+            return redirect(next_page) if next_page else redirect(url_for('index'))
+        else:
+            flash("Invalid Username or Password","danger")
+            return redirect(url_for('login'))
+    return render_template("admin/login.html")
+
+
+@app.route('/admin/logout')
+def logout():
+    logout_user()
+    flash('Logged out successfully', 'success')
+    return redirect(url_for('login'))
