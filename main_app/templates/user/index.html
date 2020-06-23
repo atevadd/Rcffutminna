@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rcffutminna - The official website of Redeemed Christian fellowship Futminna chapter</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"> -->
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../../static/css/user.css">
+</head>
+<body>
+
+    <!-- WEBSITE PRE LOADER -->
+    <div class="pre-loader">
+        <div class="loader">
+            <img src="../../static/img/rcflogo.png" alt="">
+        </div>
+    </div>
+    <!-- THE TOP NAVIGATION -->
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="brand-logo">Rcffutminna</a>
+
+            <span class="toggler" id="toggler">
+                <i class="fa fa-bars"></i>
+            </span>
+
+            <ul class="nav-links" id="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sermons</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Annoucements</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ENDS HERE  -->
+
+    <!-- THE CAROUSEL STARTS HERE -->
+    <div class="carousel owl-carousel owl-theme">
+        <figure class="item carousel-content one">
+            <h1 class="main-text"><i class="fa fa-quote-left"></i>In the beginning was the word, and the word was with God, and the word was Good.<i class="fa fa-quote-right"></i></h1>
+            <figcaption>- John 1 : 1</figcaption>
+        </figure>
+        <figure class="item carousel-content two">
+            <h1 class="main-text"><i class="fa fa-quote-left"></i>The entrance of thy word giveth light; it giveth understanding unto the simple.<i class="fa fa-quote-right"></i></h1>
+            <figcaption>- Psalms 119:130</figcaption>
+        </figure>
+        <figure class="item carousel-content three">
+            <h1 class="main-text"><i class="fa fa-quote-left"></i>But my God shall supply all your need according to his riches in glory by christ Jesus.<i class="fa fa-quote-right"></i></h1>
+            <figcaption>- Phil 4:4</figcaption>
+        </figure>
+        <figure class="item carousel-content four">
+            <h1 class="main-text"><i class="fa fa-quote-left"></i>Though thy beginning was small, yet thy latter end should greatly increase.<i class="fa fa-quote-right"></i></h1>
+            <figcaption>- Job 8:7</figcaption>
+        </figure>
+    </div>
+
+    <!-- THE WELCOME AREA -->
+    <div class="welcome-area">
+        <h2>Welcome to Rcffutminna </h2>
+        <p>Aggresive Evangelism</p>
+    </div>
+    
+
+    <!-- THE key points section-->
+    <div class="key-points">
+        <div class="container">
+            <div class="point-1">
+                <i class="fa fa-microphone"></i>
+                <a href="#">Sermon</a>
+                <p>We post our sermon weekly, come check out the lost of what we have. You will be blessed.</p>
+            </div>
+            <div class="point-2">
+                <i class="fa fa-calendar"></i>
+                <a href="#">Events</a>
+                <p>Find out what is happening at our fellowship in the next week or even throughout the session.</p>
+            </div>
+            <div class="point-3">
+                <i class="fa fa-users"></i>
+                <a href="#">Executives</a>
+                <p>Come meet the excutives of the fellowship. Who are running with a vision to move the fellowship forward.</p>
+            </div>
+        </div>
+    </div>
+    <!-- END HERE============ -->
+
+    <!-- FEATURED SERMON -->
+    <div class="featured-sermon">
+        <div class="container">
+            <div class="sermon">
+                <h3>Featured sermon</h3>
+                <h1>John Doe - Walking in the spirit</h1>
+                <p class="meta-data">
+                    <span><i class="fa fa-calendar"></i> June 22, 2020</span>
+                    <span><i class="fa fa-user"></i> John Doe</span>
+                    <span><i class="fa fa-tag"></i> Sunday Service</span>
+                </p>
+                <a href="../../static/audio/BBM TONE.mp3" class="downloadbtn" download="Walking in the spirit"><i class="fa fa-download"></i> Download</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../static/js/owl.carousel.min.js"></script>
+    <script src="../../static/js/user.js" defer></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items:1,
+                loop:true,
+                dots:true,
+                autoplay:true,
+                autoplayTimeout:5000
+            });
+          });
+    </script>
+    <script>
+$(document).ready(function() {
+//Preloader
+preloaderFadeOutTime = 400;
+function hidePreloader() {
+var preloader = $('.pre-loader');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+setInterval(hidePreloader, 1000);
+});
+</script>
+</body>
+</html>
