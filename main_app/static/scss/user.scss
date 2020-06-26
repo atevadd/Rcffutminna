@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $font;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -56,4 +57,5 @@ a{
 
 @import "user/nav";
 @import "user/index";
+@import "user/footer";
 
