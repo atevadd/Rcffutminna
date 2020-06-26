@@ -49,6 +49,68 @@ a {
   height: 100%;
 }
 
+.backtotop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  font-size: 25px;
+  height: 50px;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 50px;
+  background-color: rgba(51, 51, 51, 0.5);
+  color: #fff;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  z-index: 999;
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  .backtotop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: rgba(51, 51, 51, 0.47);
+    color: #fff;
+    font-size: 16px;
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    z-index: 999;
+    cursor: pointer;
+  }
+}
+
+.backtotop:hover {
+  background-color: #cf4a46;
+  color: white;
+}
+
+@media (max-width: 414px) {
+  .backtotop i {
+    font-size: 20px;
+  }
+}
+
 @-webkit-keyframes loader {
   0% {
     -webkit-transform: scale(1);
@@ -821,6 +883,25 @@ a {
 }
 
 @media (max-width: 414px) {
+  .events {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 30px 0;
+  }
+}
+
+.events h2 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin: 60px 0 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 414px) {
   .events h2 {
     font-weight: 700;
     text-align: center;
@@ -829,6 +910,15 @@ a {
     margin-top: 40px;
     text-transform: uppercase;
   }
+}
+
+.events small {
+  font-size: 1rem;
+  color: #666666;
+  text-align: center;
+  margin: 0 0 60px;
+  font-style: italic;
+  display: block;
 }
 
 @media (max-width: 414px) {
@@ -842,6 +932,14 @@ a {
   }
 }
 
+.events .event-card {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  overflow: auto;
+}
+
 @media (max-width: 414px) {
   .events .event-card {
     width: 90%;
@@ -850,9 +948,24 @@ a {
   }
 }
 
+.events .event-card.second {
+  clear: both;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 414px) {
+  .events .event-card.second {
+    margin-bottom: 0;
+  }
+}
+
 .events .event-card img {
   display: block;
   border-radius: 3px;
+  width: 35%;
+  height: 200px;
+  float: left;
+  margin-right: 25px;
 }
 
 @media (max-width: 414px) {
@@ -861,6 +974,14 @@ a {
     height: 250px;
     margin-bottom: 10px;
   }
+}
+
+.events .event-card h3 {
+  line-height: 1.2;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  padding: 0 0 7px;
 }
 
 @media (max-width: 414px) {
@@ -880,6 +1001,8 @@ a {
 .events .event-card ul li {
   display: block;
   color: #666666;
+  padding: 7px;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 414px) {
@@ -896,6 +1019,9 @@ a {
 }
 
 .events .event-card ul li i {
+  float: left;
+  margin: 0 auto;
+  width: 30px;
   padding: 0 10px 0 0;
   line-height: 1.3;
 }
@@ -906,8 +1032,17 @@ a {
   padding: 30px 10px;
 }
 
+.quote h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 0 350px;
+  color: #fff;
+  font-weight: 500;
+}
+
 @media (max-width: 414px) {
   .quote h2 {
+    padding: 0;
     color: #fff;
     text-align: center;
     font-size: 1.7rem;
@@ -918,12 +1053,24 @@ a {
 
 .quote cite {
   display: block;
-  font-size: 0.8rem;
-  color: #29333a;
+  font-size: 1rem;
+  color: #333;
   text-align: center;
   padding: 20px 0 0;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media (max-width: 414px) {
+  .quote cite {
+    display: block;
+    font-size: 0.8rem;
+    color: #29333a;
+    text-align: center;
+    padding: 20px 0 0;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
 
 .contact {
@@ -938,9 +1085,11 @@ a {
 }
 
 .contact h2 {
+  font-size: 2.2rem;
   text-align: center;
   color: #333;
-  margin-top: 30px;
+  margin-top: 60px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 414px) {
@@ -955,18 +1104,22 @@ a {
   display: block;
   text-align: center;
   color: #666666;
+  font-size: 16px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 414px) {
   .contact small.sub-text {
     font-size: 12px;
     margin-bottom: 20px;
-    padding: 0 10px;
+    padding: 0 40px;
   }
 }
 
 .contact .form {
   position: relative;
+  width: 50%;
+  margin: 0 auto 50px;
 }
 
 @media (max-width: 414px) {
@@ -980,6 +1133,7 @@ a {
 .contact .form .input-box {
   width: 100%;
   position: relative;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 414px) {
@@ -990,6 +1144,9 @@ a {
 
 .contact .form .input-box label {
   display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 4px 0;
 }
 
 @media (max-width: 414px) {
@@ -1005,12 +1162,25 @@ a {
   position: relative;
   display: block;
   width: 100%;
+  font-size: 1rem;
+  height: 45px;
   border: 2px solid #ccc;
   border-radius: 4px;
+  padding: 0 8px;
+}
+
+.contact .form .input-box input:focus {
+  -webkit-box-shadow: 0 0 5px 1px #cf4a46;
+          box-shadow: 0 0 5px 1px #cf4a46;
 }
 
 @media (max-width: 414px) {
   .contact .form .input-box input {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
     height: 40px;
     padding: 5px 8px;
   }
@@ -1019,6 +1189,9 @@ a {
 .contact .form .input-box i {
   position: absolute;
   display: none;
+  top: 50px;
+  right: 10px;
+  color: #cf4a46;
 }
 
 @media (max-width: 414px) {
@@ -1036,6 +1209,8 @@ a {
 
 .contact .form .input-box small {
   display: none;
+  color: #cf4a46;
+  font-size: 14px;
 }
 
 @media (max-width: 414px) {
@@ -1057,6 +1232,14 @@ a {
   border: 2px solid #ccc;
   border-radius: 4px;
   resize: none;
+  height: 250px;
+  overflow: auto;
+  padding: 10px 8px;
+}
+
+.contact .form .input-box textarea:focus {
+  -webkit-box-shadow: 0 0 5px 1px #cf4a46;
+          box-shadow: 0 0 5px 1px #cf4a46;
 }
 
 @media (max-width: 414px) {
@@ -1070,52 +1253,54 @@ a {
 .contact .form button.submit {
   display: inline-block;
   margin-top: 15px;
-  padding: 10px 50px;
+  padding: 12px 50px;
   color: #fff;
   background-color: #cf4a46;
-  font-size: 14px;
+  font-size: 18px;
   border: none;
   border-radius: 4px;
   outline: none;
 }
 
-.backtotop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50px;
-  background-color: rgba(51, 51, 51, 0.47);
-  color: #fff;
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: all 400ms ease-out;
-  transition: all 400ms ease-out;
-  z-index: 999;
-  cursor: pointer;
-}
-
-.backtotop:hover {
-  background-color: #cf4a46;
-  color: white;
-}
-
 @media (max-width: 414px) {
-  .backtotop i {
-    font-size: 20px;
+  .contact .form button.submit {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 50px;
+    color: #fff;
+    background-color: #cf4a46;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
   }
 }
 
 .footer {
   width: 100%;
+  margin: 0 auto;
   background-color: #29333a;
+}
+
+@media (max-width: 414px) {
+  .footer {
+    width: 100%;
+    background-color: #29333a;
+  }
+}
+
+.footer .container {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 40px 0;
 }
 
 @media (max-width: 414px) {
@@ -1129,10 +1314,13 @@ a {
 
 .footer .container .footer-logo {
   display: none;
+  width: 30%;
+  height: 200px;
 }
 
 @media (max-width: 414px) {
   .footer .container .footer-logo {
+    display: none;
     width: 90%;
     height: 300px;
     margin-bottom: 10px;
@@ -1155,15 +1343,32 @@ a {
 }
 
 .footer .container .footer-contact h2 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
   padding: 10px 0;
 }
 
+@media (max-width: 414px) {
+  .footer .container .footer-contact h2 {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 0;
+  }
+}
+
 .footer .container .footer-contact ul {
   list-style: none;
+}
+
+.footer .container .footer-contact ul li {
+  padding: 5px 2px;
+  font-size: 1rem;
+  color: #9b9b9b;
+  text-align: left;
 }
 
 @media (max-width: 414px) {
@@ -1200,6 +1405,14 @@ a {
   }
 }
 
+.footer .container .useful-links h2 {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
 @media (max-width: 414px) {
   .footer .container .useful-links h2 {
     font-size: 1rem;
@@ -1214,6 +1427,12 @@ a {
   list-style: none;
 }
 
+.footer .container .useful-links ul li {
+  padding: 5px 0;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
 @media (max-width: 414px) {
   .footer .container .useful-links ul li {
     font-size: .81rem;
@@ -1226,6 +1445,10 @@ a {
   color: #cf4a46;
   padding: 0 19px 0 0;
   font-size: .7rem;
+}
+
+.footer .container .useful-links ul li a {
+  color: #9b9b9b;
 }
 
 @media (max-width: 414px) {
@@ -1244,6 +1467,14 @@ a {
   }
 }
 
+.footer .container .social-media h2 {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
 @media (max-width: 414px) {
   .footer .container .social-media h2 {
     font-size: 1rem;
@@ -1258,11 +1489,22 @@ a {
   list-style: none;
 }
 
+.footer .container .social-media ul li {
+  display: inline-block;
+  padding-right: 25px;
+  padding-top: 20px;
+}
+
 @media (max-width: 414px) {
   .footer .container .social-media ul li {
     display: inline-block;
     padding-right: 25px;
   }
+}
+
+.footer .container .social-media ul li a {
+  font-size: 23px;
+  color: #9b9b9b;
 }
 
 @media (max-width: 414px) {
@@ -1282,6 +1524,14 @@ a {
 .footer .main-footer {
   width: 100%;
   background-color: #14191c;
+}
+
+.footer .main-footer p {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #9b9b9b;
+  word-spacing: 4px;
 }
 
 @media (max-width: 414px) {
