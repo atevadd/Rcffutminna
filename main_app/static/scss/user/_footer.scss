@@ -10,13 +10,18 @@
     }
 
     .container {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         display: flex;
         align-items: flex-start;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 40px 0;
 
+        @media (min-width:414px) and (max-width:990px){
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
         @media (max-width:414px) {
             display: block;
             width: 90%;
@@ -26,9 +31,14 @@
 
         .footer-logo {
             display: none;
-            width: 30%;
+            position: relative;
+            // width: 20%;
             height: 200px;
+            // border: 1px solid red;
 
+            @media(min-width:414px) and(max-width:990px){
+                display: none;
+            }
             @media (max-width:414px) {
                 display: none;
                 width: 90%;
@@ -37,10 +47,14 @@
             }
 
             img {
+                width: 100%;
+                height: 100%;
+                transform: scale(1.9);
+
                 @media (max-width:414px) {
                     width: 100%;
                     height: 100%;
-                    border: 1px solid red;
+                    // border: 1px solid red;
                 }
             }
         }
@@ -54,7 +68,7 @@
             }
 
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 color: $light-text-color;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -74,7 +88,7 @@
 
                 li {
                     padding: 5px 2px;
-                    font-size: 1rem;
+                    font-size: .9rem;
                     color: #9b9b9b;
                     text-align: left;
 
@@ -90,7 +104,7 @@
                         display: inline-block;
                         width: 30px;
                         color: $primary-bg-color;
-                        padding: 0 16px 0 0;
+                        padding: 0 10px 0 0;
                     }
 
                     a {
@@ -113,7 +127,7 @@
             }
 
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 color: $light-text-color;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -133,7 +147,7 @@
 
                 li {
                     padding: 5px 0;
-                    font-size: 1rem;
+                    font-size: .9rem;
                     color: #9b9b9b;
 
                     @media (max-width:414px) {
@@ -170,7 +184,7 @@
             }
 
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 color: $light-text-color;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -195,7 +209,7 @@
 
                     @media(max-width:414px) {
                         display: inline-block;
-                        padding-right: 25px;
+                        padding-right: 15px;
                     }
 
                     a {

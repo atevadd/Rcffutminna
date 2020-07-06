@@ -4,13 +4,28 @@
   padding: 15px 0;
 
   @media (max-width: 414px) {
-    position: sticky;
+    // position: sticky;
     top: 0;
     width: 100%;
     height: 100%;
     // background-color: #2c3e50;
     background-color: #fff;
-    padding: 7px 0;
+    padding: 13px 0;
+    transition: all 300ms ease-out;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    z-index: 999;
+    box-shadow: 0 1px 10px rgba(0,0,0,.2);
+  }
+  @media (min-width: 414px) and (max-width:990px) {
+    // position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: #2c3e50;
+    background-color: #fff;
+    padding: 13px 0;
     transition: all 300ms ease-out;
     animation-name: show;
     animation-duration: 1s;
@@ -31,6 +46,11 @@
       width: 90%;
       margin: 0 auto;
     }
+    @media (min-width:414px) and (max-width:990px) {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+    }
 
     .brand-logo {
       font-size: 2.3rem;
@@ -38,7 +58,12 @@
       font-weight: 700;
       @media (max-width: 414px) {
         display: inline-block;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
+        color: $dark-text-color;
+      }
+      @media (min-width: 414px) and (max-width:990px) {
+        display: inline-block;
+        font-size: 1.8rem;
         color: $dark-text-color;
       }
     }
@@ -52,10 +77,20 @@
         padding: 7px 7px 0;
         background-color: none;
       }
+      @media (min-width: 414px) and (max-width:990px){
+        display: block;
+        float: right;
+        padding: 7px 7px 0;
+        background-color: none;
+      }
 
       i {
         @media (max-width: 414px) {
-          font-size: 1.7rem;
+          font-size: 1.9rem;
+          color: $primary-bg-color;
+        }
+        @media (min-width: 414px) and (max-width:990px) {
+          font-size: 2rem;
           color: $primary-bg-color;
         }
       }
@@ -66,6 +101,12 @@
       list-style: none;
 
       @media (max-width: 414px) {
+        display: none;
+        list-style: none;
+        margin-top: 10px;
+        transition: all 400ms ease-out;
+      }
+      @media (min-width: 414px) and (max-width:990px) {
         display: none;
         list-style: none;
         margin-top: 10px;
@@ -85,6 +126,10 @@
           display: block;
           padding: 0;
         }
+        @media (min-width: 414px) and (max-width:990px) {
+          display: block;
+          padding: 0;
+        }
 
         a {
           padding: 10px 15px;
@@ -97,7 +142,17 @@
             display: block;
             color: $dark-text-color;
             border-radius: 4px;
-
+          }
+          @media (min-width: 414px) and (max-width:990px) {
+            font-size: 16px;
+            padding: 7px 0;
+            display: block;
+            color: $dark-text-color;
+            border-radius: 4px;
+          }
+          
+          &:last-child(){
+            padding: 0 0 0 15px;
           }
           &:hover{
             border-radius: 4px;
@@ -107,6 +162,12 @@
             @media (max-width:414px){
               color: $primary-bg-color;
               background-color: transparent;
+            }
+            @media (min-width:414px) and (max-width:990px) {
+              color: $light-text-color;
+              background-color: $primary-bg-color;
+              padding: 7px 3px;
+
             }
           }
         }

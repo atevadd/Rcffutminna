@@ -70,7 +70,7 @@
     @media (max-width: 414px) {
       background-image: linear-gradient(rgba(0, 0, 0, 0.8),
           rgba(0, 0, 0, 0.8)),
-        url("../../static/img/bg1.jpg");
+        url("../../static/img/rcflogo.png");
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -86,6 +86,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    aspect-ratio: cover;
 
     @media (max-width: 414px) {
       background-image: linear-gradient(rgba(0, 0, 0, 0.8),
@@ -232,6 +233,12 @@
     justify-content: space-between;
     margin: 100px auto;
 
+    @media (min-width:414px) and (max-width:990px){
+      display: block;
+      width: 100%;
+      margin: 70px auto;
+      
+    }
 
     @media(max-width:414px) {
       width: 100%;
@@ -242,9 +249,15 @@
     .point-1 {
       width: 30%;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.155);
       border-radius: 4px;
       padding: 30px 30px;
+
+      @media(min-width:414px) and (max-width:990px){
+        display: block;
+        width: 60%;
+        margin: 40px auto;
+      }
 
       @media (max-width: 414px) {
         display: block;
@@ -252,7 +265,7 @@
         margin: 10px auto 20px;
         padding: 30px 30px;
         // background-color: rgb(209, 209, 209);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
         text-align: center;
         border-radius: 4px;
         // border: 1px solid #ccc;
@@ -300,9 +313,15 @@
     .point-2 {
       width: 30%;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       padding: 30px 30px;
+
+      @media(min-width:414px) and (max-width:990px){
+        display: block;
+        width: 60%;
+        margin: 40px auto;
+      }
 
       @media (max-width: 414px) {
         display: block;
@@ -355,9 +374,15 @@
     .point-3 {
       width: 30%;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       padding: 30px 30px;
+
+      @media(min-width:414px) and (max-width:990px){
+        display: block;
+        width: 60%;
+        margin: 40px auto;
+      }
 
 
       @media (max-width: 414px) {
@@ -373,7 +398,7 @@
 
       i {
         display: block;
-        font-size: 3.5rem;
+        font-size: 3.4rem;
         margin-bottom: 10px;
         color: $dark-text-color;
 
@@ -399,7 +424,7 @@
       }
 
       p {
-        font-size: 1.05rem;
+        font-size: 1.01rem;
         color: $dark-text-color;
 
         @media (max-width: 414px) {
@@ -574,6 +599,12 @@
     margin-bottom: 70px;
     overflow: auto;
 
+    @media(min-width:414px) and (max-width:990px){
+      display: block;
+      width: 90%;
+      margin: 0 auto 60px;
+    }
+
     @media (max-width: 414px) {
       width: 90%;
       margin: 0 auto;
@@ -583,6 +614,7 @@
     &.second {
       clear: both;
       margin-bottom: 60px;
+      margin-top: 0;
 
       @media (max-width:414px) {
         margin-bottom: 0;
@@ -631,6 +663,10 @@
         padding: 7px;
         font-size: 1.1rem;
 
+        @media(min-width:414px) and (max-width:990px){
+          font-size: 16px;
+        }
+  
         @media (max-width: 414px) {
           font-size: 14px;
           display: block;
@@ -662,15 +698,38 @@
   background-color: $primary-bg-color;
   padding: 30px 10px;
 
+  h1{
+    font-size: 2.7rem;
+    color:$light-text-color;
+    text-align: center;
+    margin-bottom:10px;
+
+
+    @media(max-width:414px){
+      font-size: 2.1rem;
+      text-align: center;
+      color: $light-text-color;
+      margin-bottom: 10px;
+    }
+  }
+
   h2 {
     text-align: center;
     font-size: 2.3rem;
-    margin: 0 350px;
+    margin: 0 250px;
     color: #fff;
     font-weight: 500;
 
+    @media(min-width:414px) and (max-width:990px){
+      display: block;
+      font-size: 1.9rem;
+      margin: 0 10px;
+    }
+
+
     @media (max-width: 414px) {
       padding: 0;
+      margin: 0;
       color: #fff;
       text-align: center;
       font-size: 1.7rem;
@@ -691,7 +750,7 @@
     @media(max-width:414px){
     display: block;
     font-size: 0.8rem;
-    color: $secondary-bg-color;
+    color: darken($color: $secondary-bg-color, $amount: 40);
     text-align: center;
     padding: 20px 0 0;
     font-weight: 600;
@@ -744,6 +803,11 @@
     width: 50%;
     margin: 0 auto 50px;
 
+    @media(min-width:414px) and (max-width:990px){
+      display: block;
+      width: 90%;
+    }
+
     @media (max-width: 414px) {
       width: 90%;
       margin: 0 auto;
@@ -756,7 +820,7 @@
       margin-bottom: 25px;
 
       @media (max-width: 414px) {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
 
       label {
