@@ -1,0 +1,64 @@
+#header{
+    display: block;
+    width: 100%;
+    background-color: $primary-bg-color;
+
+
+    @media(max-width:414px){
+        width: 100%;
+    }
+    .event-header{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0;
+        @media (max-width:414px){
+            width: 100%;
+            display: block;
+            background-color: $primary-bg-color;
+            padding: 35px 15px;
+        }
+    
+        h1{
+            font-size: 2rem;
+            color: $light-text-color;  
+            font-weight: 500;
+            @media(max-width:414px){
+                font-size: 1.8rem;
+                margin-bottom: 7px;
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+    
+        p{
+            font-size: 1rem;
+            color: $light-text-color;
+            padding-right: 10px;
+
+            @media (max-width:414px){
+                color: $light-text-color;
+                font-size: 15px;
+            }
+    
+            a{
+                color: #cccccc98;
+
+                &:hover{
+                    color: $light-text-color;
+                }
+            }
+        }
+    }
+}
+
+.events.monthly{
+    padding: 0 0 30px !important;
+    margin: 0;
+    
+    h2{
+        margin-top: 10px;
+    }
+}

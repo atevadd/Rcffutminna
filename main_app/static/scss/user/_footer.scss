@@ -1,0 +1,261 @@
+// THE SUB FOOTER STARTS HERE
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $secondary-bg-color;
+
+    @media (max-width:414px) {
+        width: 100%;
+        background-color: $secondary-bg-color;
+    }
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 40px 0;
+
+        @media (min-width:414px) and (max-width:990px){
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
+        @media (max-width:414px) {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        .footer-logo {
+            display: none;
+            position: relative;
+            // width: 20%;
+            height: 200px;
+            // border: 1px solid red;
+
+            @media(min-width:414px) and(max-width:990px){
+                display: none;
+            }
+            @media (max-width:414px) {
+                display: none;
+                width: 90%;
+                height: 300px;
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                transform: scale(1.9);
+
+                @media (max-width:414px) {
+                    width: 100%;
+                    height: 100%;
+                    // border: 1px solid red;
+                }
+            }
+        }
+
+        .footer-contact {
+
+            @media(max-width:414px) {
+                width: 100%;
+                margin-bottom: 15px;
+                // padding: 0 7px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                color: $light-text-color;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 10px 0;
+
+                @media(max-width:414px) {
+                    font-size: 1rem;
+                    color: $light-text-color;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 10px 0;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    padding: 5px 2px;
+                    font-size: .9rem;
+                    color: #9b9b9b;
+                    text-align: left;
+
+                    @media(max-width:414px) {
+                        padding: 5px 2px;
+                        font-size: .81rem;
+                        color: #9b9b9b;
+                        text-align: left;
+                        // word-spacing: 2px;
+                    }
+
+                    i {
+                        display: inline-block;
+                        width: 30px;
+                        color: $primary-bg-color;
+                        padding: 0 10px 0 0;
+                    }
+
+                    a {
+                        color: #9b9b9b;
+
+                        &:hover {
+                            color: $primary-bg-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .useful-links {
+            display: block;
+            
+
+            @media(max-width:414px) {
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                color: $light-text-color;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 10px 0;
+
+                @media (max-width:414px) {
+                    font-size: 1rem;
+                    color: $light-text-color;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 10px 0;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    padding: 5px 0;
+                    font-size: .9rem;
+                    color: #9b9b9b;
+
+                    @media (max-width:414px) {
+                        font-size: .81rem;
+                        color: #9b9b9b;
+                        padding: 5px 0;
+                    }
+
+                    i {
+                        color: $primary-bg-color;
+                        padding: 0 19px 0 0;
+                        font-size: .7rem;
+                    }
+
+                    a {
+                        color: #9b9b9b;
+
+                        @media (max-width:414px) {
+                            color: #9b9b9b;
+                        }
+
+                        &:hover {
+                            color: $primary-bg-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .social-media {
+
+            @media(max-width:414px) {
+                margin-top: 15px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                color: $light-text-color;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 10px 0;
+
+                @media (max-width:414px) {
+                    font-size: 1rem;
+                    color: $light-text-color;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 10px 0 0;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    display: inline-block;
+                    padding-right: 25px;
+                    padding-top: 20px;
+
+                    @media(max-width:414px) {
+                        display: inline-block;
+                        padding-right: 15px;
+                    }
+
+                    a {
+                        font-size: 23px;
+                        color: #9b9b9b;
+                        @media (max-width:414px) {
+                            font-size: 20px;
+                            color: #9b9b9b;
+
+                            &:hover {
+                                color: $primary-bg-color;
+                            }
+                        }
+
+                        &:hover {
+                            color: $primary-bg-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // THE COPYRGIHT SECTION OF THE FOOTER
+    .main-footer {
+        width: 100%;
+        background-color: darken($color: $secondary-bg-color, $amount: 10);
+
+        p {
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            color: #9b9b9b;
+            word-spacing: 4px;
+
+            @media (max-width:414px) {
+                font-size: 13px;
+                text-align: center;
+                color: #9b9b9b;
+                word-spacing: 2px;
+                padding: 14px 0;
+            }
+
+            span.footer-name {
+                color: $primary-bg-color;
+            }
+        }
+    }
+}
