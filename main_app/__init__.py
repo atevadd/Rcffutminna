@@ -15,7 +15,7 @@ def create_db():
     db.create_all() 
     print("Database Created Successfully") 
 
-from main_app import routes
+from main_app import routes, user_routes
 from main_app.models import User
 
 
