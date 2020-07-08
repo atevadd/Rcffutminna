@@ -1,50 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rcffutminna - The official website of Redeemed Christian fellowship Futminna chapter</title>
-    <!-- fontawesome cdn -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- 
-
-    <!-- OWL CAROUSEL CSS -->
-    <link rel="stylesheet" href="../../static/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../static/css/owl.theme.default.min.css">
-
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="../../static/css/user.css">
-</head>
-<body>
-
-    <!-- WEBSITE PRE LOADER -->
-    <div class="pre-loader">
-        <div class="loader">
-            <img src="../../static/img/rcflogo.png" alt="">
-        </div>
-    </div>
-    <!-- THE TOP NAVIGATION -->
-    <nav class="nav" >
-        <div class="container">
-            <a href="#" class="brand-logo">Rcffutminna</a>
-
-            <span class="toggler" id="toggler">
-                <i class="fa fa-bars"></i>
-            </span>
-
-            <ul class="nav-links" id="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sermons</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#">Alumni</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- ENDS HERE  -->
-
+{% extends 'user/base.html' %}
+{% block contents %}
     <!-- THE CAROUSEL STARTS HERE -->
     <div class="carousel owl-carousel owl-theme" id="top">
         <figure class="item carousel-content one">
@@ -70,7 +25,7 @@
         <h2>Welcome to Rcffutminna </h2>
         <p>Aggresive Evangelism</p>
     </div>
-    
+
 
 
     <!-- THE key points section-->
@@ -118,7 +73,7 @@
         <small>Come and enjoy God's presence</small>
 
         <div class="event-card">
-            <img src="../../static/img/pray.jpg" alt="upcoming event image" class="image"> 
+            <img src="{{url_for('static', filename='img/pray.jpg')}}" alt="upcoming event image" class="image">
             <h3>Prayer Meeting</h3>
             <ul>
                 <li class="day"><i class="fa fa-calendar"></i> Monday </li>
@@ -128,7 +83,7 @@
             </ul>
         </div>
         <div class="event-card second">
-            <img src="../../static/img/bg4.jpg" alt="upcoming event image" class="image"> 
+            <img src="{{url_for('static', filename='img/bg4.jpg')}}" alt="upcoming event image" class="image">
             <h3>Bible Study</h3>
             <ul>
                 <li class="day"><i class="fa fa-calendar"></i> Wednesday </li>
@@ -140,7 +95,7 @@
     </div>
     <!-- ENDS HERE ========== -->
 
-    
+
 
     <!-- CONTACT FORM  =======  -->
     <div class="contact">
@@ -156,13 +111,13 @@
             </div>
             <div class="input-box">
                 <label for="email">Email Address</label>
-                <input type="email" name="email" id="email" placeholder="Email address" >
+                <input type="email" name="email" id="email" placeholder="Email address">
                 <i class="fa fa-exclamation-circle" id="email-error"></i>
                 <small class="email-error ">Email cannot be empty</small>
             </div>
             <div class="input-box">
                 <label for="message">Message</label>
-                <textarea name="message" id="message"  placeholder="Write your message"></textarea>
+                <textarea name="message" id="message" placeholder="Write your message"></textarea>
                 <i class="fa fa-exclamation-circle" id="message-error"></i>
                 <small class="message-error">Message cannot be empty</small>
             </div>
@@ -173,149 +128,9 @@
 
     <!-- QUOTE SECTION HERE-->
     <div class="quote">
-      <h1><i class="fa fa-quote-left"></i></h1>
-      <h2>You are the only Bible some unbelievers will ever read.</h2>
-      <cite>john macarthur</cite>
+        <h1><i class="fa fa-quote-left"></i></h1>
+        <h2>You are the only Bible some unbelievers will ever read.</h2>
+        <cite>john macarthur</cite>
     </div>
 
-        <!-- THE FOOTER SECTION STARTS HERE ============-->
-        <footer class="footer">
-            <div class="container">
-              <div class="footer-logo">
-                <img src="../../static/img/rcflogo.png" alt="rcffutminna logo" />
-              </div>
-              <div class="footer-contact">
-                <h2>Gidan Kwano Campus</h2>
-                <ul>
-                  <li>
-                    <i class="fa fa-map-marker"></i>Behind SMS lodge, Gidan Kwano
-                  </li>
-                  <li><i class="fa fa-phone"></i>080-xxxx-xxxx, 090-xxxx-xxxx</li>
-                  <li>
-                    <i class="fa fa-envelope"></i
-                    ><a href="mailto:info@rcffutminna.com">info@rcffutminna.com</a>
-                  </li>
-                  <li><i class="fa fa-globe"></i>www.rcffutminna.com</li>
-                </ul>
-              </div>
-              <div class="footer-contact">
-                <h2>Bosso Campus</h2>
-                <ul>
-                  <li>
-                    <i class="fa fa-map-marker"></i>Behind Wasika primary school,
-                    Bosso
-                  </li>
-                  <li><i class="fa fa-phone"></i>080-xxxx-xxxx, 090-xxxx-xxxx</li>
-                  <li><i class="fa fa-envelope"></i>info@rcffutminna.com</li>
-                  <li><i class="fa fa-globe"></i>www.rcffutminna.com</li>
-                </ul>
-              </div>
-      
-              <div class="useful-links">
-                <h2>Online Giving</h2>
-                <ul>
-                  <li><i class="fa fa-chevron-right"></i><a href="#">ACCT Number: 021209392</a></li>
-                  <li>
-                    <i class="fa fa-chevron-right"></i><a href="#">ACCT NAME: RCF FUTMINNA GK CAMPUS</a>
-                  </li>
-                  <li><i class="fa fa-chevron-right"></i><a href="#">BANK NAME: GTBANK</a></li>
-                </ul>
-              </div>
-              <div class="social-media">
-                <h2>Follow us on:</h2>
-                <ul class="social-media">
-                  <li>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-telegram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-      
-            <div class="main-footer">
-              <p>
-                <i class="fa fa-copyright">
-                  <span id="date">2012</span>
-                  <span class="footer-name">RCFFUTMINNA. </span></i
-                >All rights reserved
-              </p>
-            </div>
-          </footer>
-          <!-- ENDS HERE ============== -->
-
-
-    <!-- BACK TO TOP BUTTON -->
-    <a href="#" class="backtotop" id="totop"><i class="fa fa-angle-up"></i></a>
-
-    <!-- JAVASCRIPT, JQUERY AND OWL-CAROUSEL JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../../static/js/owl.carousel.min.js"></script>
-    <script src="../../static/js/user.js" defer></script>
-    <script>
-        // THE CAROUSEL TRIGGER 
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                items:1,
-                loop:true,
-                dots:true,
-                autoplay:true,
-                autoplayTimeout:5000,
-                slideTransition: "ease-out"
-            });
-          });
-    </script>
-    <script>
-        $(document).ready(function() {
-        //Preloader
-        preloaderFadeOutTime = 400;
-        function hidePreloader() {
-        var preloader = $('.pre-loader');
-        preloader.fadeOut(preloaderFadeOutTime);
-        }
-        setInterval(hidePreloader, 1000);
-        });
-    </script>
-    <script>
-        var footerDate = document.getElementById('date');
-        var date = new Date();
-
-        footerDate.innerHTML = date.getFullYear();
-
-        
-        var totop = document.getElementById("totop"); //back to top button
-
-        
-
-        window.onscroll = function(){
-            toTop();
-        };
-
-        // the function that shows the back to top button on scroll
-        function toTop(){
-            if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
-                totop.style.display = "flex";
-            }else{
-                totop.style.display = "none";
-            }
-        }
-
-        //the function that move the page to the top when the back to top button is click
-        function topFunction(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-        //the event listener that moves the page to the top
-        totop.addEventListener("click", topFunction);
-        
-    </script>
-</body>
-</html>
+{% endblock contents %}

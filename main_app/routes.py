@@ -36,7 +36,7 @@ def save_book(book):
 #dashboard routes
 @app.route("/admin/index")
 @login_required
-def index():
+def admin_index():
     galleries = Gallery.query.order_by(Gallery.id.desc()).limit(3).all()
     messages = Message.query.order_by(Message.id.desc()).limit(3).all()
     return render_template("admin/index.html", messages=messages, galleries=galleries)
@@ -260,7 +260,7 @@ def login():
             login_user(user)
             next_page = request.args.get('next')
             flash("Login Successfull", "success")
-            return redirect(next_page) if next_page else redirect(url_for('index'))
+            return redirect(next_page) if next_page else redirect(url_for('admin_index'))
         else:
             flash("Invalid Username or Password","danger")
             return redirect(url_for('login'))
