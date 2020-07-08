@@ -34,7 +34,7 @@ def save_book(book):
     return book_fn
 
 #dashboard routes
-@app.route("/")
+@app.route("/admin/index")
 @login_required
 def index():
     galleries = Gallery.query.order_by(Gallery.id.desc()).limit(3).all()
@@ -255,7 +255,7 @@ def delete_testimony(id):
 @app.route('/admin/login', methods=['GET','POST'])
 def login():
     if request.method == "POST":
-        user = User.query.filter_by(username="arinze").first()
+        user = User.query.filter_by(username="admin@rcffutminna1234").first()
         if request.form['username'] == user.username and request.form['password'] == user.password:
             login_user(user)
             next_page = request.args.get('next')
@@ -272,3 +272,4 @@ def logout():
     logout_user()
     flash('Logged out successfully', 'success')
     return redirect(url_for('login'))
+
