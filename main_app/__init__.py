@@ -22,9 +22,9 @@ from main_app.models import User
 @app.before_first_request
 def create_db_command():
     create_db()
-    find_user = User.query.filter_by(username="arinze").first()
+    find_user = User.query.filter_by(username="admin@rcffutminna1234").first()
     if not find_user:
-        user = User(username="arinze",password="password")
+        user = User(username="admin@rcffutminna1234",password="rcffutminna@admin1234")
         db.session.add(user)
         db.session.commit()
     else:
