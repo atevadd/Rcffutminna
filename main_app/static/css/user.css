@@ -20,7 +20,7 @@ a {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #cf4a46;
+  background-color: #333;
   z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2060,83 +2060,41 @@ a {
 }
 
 .gallery-section .search-box {
-  display: block;
-  margin: 0 auto;
-  width: 40%;
   position: relative;
-}
-
-@media (min-width: 500px) and (max-width: 990px) {
-  .gallery-section .search-box {
-    width: 70%;
-  }
-}
-
-@media (max-width: 500px) {
-  .gallery-section .search-box {
-    width: 100%;
-    margin-top: 40px;
-  }
-}
-
-.gallery-section .search-box label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
   display: block;
-}
-
-@media (max-width: 500px) {
-  .gallery-section .search-box label {
-    font-size: 1rem;
-  }
+  width: 50%;
+  margin: 30px auto 40px;
 }
 
 .gallery-section .search-box input {
-  position: relative;
-  display: block;
   width: 100%;
-  height: 45px;
+  display: block;
+  height: 55px;
+  border-radius: 50px;
+  position: relative;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 8px;
-  color: #333;
-}
-
-@media (max-width: 500px) {
-  .gallery-section .search-box input {
-    height: 45px;
-    font-size: 12px;
-  }
+  padding-left: 15px;
+  padding-right: 145px;
+  font-size: 16px;
 }
 
 .gallery-section .search-box input:focus {
-  -webkit-box-shadow: 0 0 0 2px #cf4a46;
-          box-shadow: 0 0 0 2px #cf4a46;
+  border: 1px solid #666666;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
 .gallery-section .search-box button {
-  position: absolute;
-  top: 29px;
-  right: -3px;
-  padding: 8px 8px;
-  width: 40px;
-  height: 45px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  display: inline-block;
+  padding: 11px 35px;
+  border-radius: 50px;
   outline: none;
-  border: none;
   background-color: #cf4a46;
   color: white;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-@media (max-width: 500px) {
-  .gallery-section .search-box button {
-    top: 25px;
-    height: 45px;
-  }
+  border: none;
+  position: absolute;
+  top: 6px;
+  right: 6px;
 }
 
 .gallery-section .main-area {
@@ -2187,7 +2145,7 @@ a {
 
 .gallery-section .main-area .gallery-thumbnail img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   border-radius: 4px 4px 0 0;
 }
 
@@ -2282,6 +2240,211 @@ a {
 }
 
 .gallery-section .pagination ul li .pagination-num.active {
+  color: #fff;
+  background-color: #cf4a46;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.book-section {
+  width: 100%;
+  margin: 50px auto 30px;
+  display: block;
+}
+
+.book-section .search-box {
+  position: relative;
+  display: block;
+  width: 50%;
+  margin: 50px auto 40px;
+}
+
+.book-section .search-box input {
+  width: 100%;
+  display: block;
+  height: 55px;
+  border-radius: 50px;
+  position: relative;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  padding-right: 145px;
+  font-size: 16px;
+}
+
+.book-section .search-box input:focus {
+  border: 1px solid #666666;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.book-section .search-box button {
+  display: inline-block;
+  padding: 11px 35px;
+  border-radius: 50px;
+  outline: none;
+  background-color: #cf4a46;
+  color: white;
+  border: none;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.book-section .books {
+  width: 85%;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.book-section .books .book-card {
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0 6px 18px rgba(148, 148, 148, 0.664);
+          box-shadow: 0 6px 18px rgba(148, 148, 148, 0.664);
+  border-radius: 4px;
+  margin-top: 50px;
+}
+
+.book-section .books .book-card-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 4px 4px 0 0;
+}
+
+.book-section .books .book-card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.book-section .books .book-card-body {
+  padding: 12px 12px 18px;
+}
+
+.book-section .books .book-card-body .tag {
+  font-size: 12px;
+  margin-top: 8px;
+  padding: 5px 15px;
+  display: inline-block;
+  background-color: #cf4a46;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.book-section .books .book-card-body .title {
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.book-section .books .book-card-body .author {
+  font-size: 12px;
+  font-style: italic;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.book-section .books .book-card-body button {
+  display: inline-block;
+  padding: 10px 35px;
+  color: #cf4a46;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #cf4a46;
+  outline: none;
+  background-color: transparent;
+}
+
+.book-section .books .book-card-body button:hover {
+  background-color: #cf4a46;
+  color: white;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.book-section .books .book-card-body button i {
+  padding-right: 10px;
+}
+
+.book-section .pagination {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  margin: 80px auto 40px;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 13px rgba(204, 204, 204, 0.657);
+          box-shadow: 3px 3px 13px rgba(204, 204, 204, 0.657);
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+@media (max-width: 500px) {
+  .book-section .pagination {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px 0;
+    margin: 30px auto 30px;
+  }
+}
+
+.book-section .pagination ul {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+}
+
+.book-section .pagination ul li {
+  display: inline-block;
+  padding: 0 7px;
+}
+
+.book-section .pagination ul li .pagination-control {
+  color: #333;
+  padding: 3px 10px;
+}
+
+.book-section .pagination ul li .pagination-control:hover {
+  color: #333;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.book-section .pagination ul li .pagination-num {
+  color: #333;
+  padding: 3px 10px;
+}
+
+.book-section .pagination ul li .pagination-num:hover {
+  color: #333;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.book-section .pagination ul li .pagination-num:active {
+  color: #fff;
+  background-color: #cf4a46;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.book-section .pagination ul li .pagination-num.active {
   color: #fff;
   background-color: #cf4a46;
   padding: 3px 10px;

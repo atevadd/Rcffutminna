@@ -12,74 +12,42 @@
     // border: 1px solid red;
   }
 
-  .search-box {
-    display: block;
-    margin: 0 auto;
-    width: 40%;
+  .search-box{
     position: relative;
+    display: block;
+    width: 50%;
+    margin: 30px auto 40px;
 
-    @media (min-width:500px) and (max-width:990px){
-        width: 70%;
+    input{
+        width: 100%;
+        display: block;
+        height: 55px;
+        border-radius: 50px;
+        position: relative;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        padding-right: 145px;
+        font-size: 16px;
+
+        &:focus{
+            border: 1px solid darken($color: #ccc, $amount: 40);
+            transition: all 300ms ease-out;
+        }
     }
 
-    @media (max-width: 500px) {
-      width: 100%;
-      margin-top: 40px;
-      // border: 1px solid green;
+    button{
+        display: inline-block;
+        padding: 11px 35px;
+        border-radius: 50px;
+        outline: none;
+        background-color: $primary-bg-color;
+        color: white;
+        border: none;
+        position: absolute;
+        top: 6px;
+        right: 6px;
     }
-
-    label {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $dark-text-color;
-      display: block;
-
-      @media (max-width: 500px) {
-        font-size: 1rem;
-      }
-    }
-    input {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 45px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 0 8px;
-      color: $dark-text-color;
-
-      @media (max-width: 500px) {
-        height: 45px;
-        font-size: 12px;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 2px $primary-bg-color;
-      }
-    }
-    button {
-      position: absolute;
-      top: 29px;
-      right: -3px;
-      padding: 8px 8px;
-      width: 40px;
-      height: 45px;
-      // border-radius: 3px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      outline: none;
-      border: none;
-      background-color: $primary-bg-color;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-
-      @media (max-width: 500px) {
-        top: 25px;
-        height: 45px;
-      }
-    }
-  }
+}
 
   .main-area {
     width: 100%;
@@ -116,7 +84,7 @@
 
       img {
         width: 100%;
-        height: 300px;
+        height: 200px;
         border-radius: 4px 4px 0 0;
       }
       .meta-tag {
