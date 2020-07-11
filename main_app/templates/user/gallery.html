@@ -1,4 +1,5 @@
 
+
 {% extends 'user/base.html' %} {% block contents %}
   <section id="header">
     <div class="event-header">
@@ -9,10 +10,15 @@
 
 <div class="gallery-section">
     <div class="search-box">
-      <input type="search" name="booksearch" id="booksearch" placeholder="Search e.g Good morning Holy Spirit">
-      <button type="submit">Search</button>
-    </div>
-
+        <label for="booksearch">Search</label>
+        <input
+          type="search"
+          name="booksearch"
+          id="booksearch"
+          placeholder="E.g 'Good morning Holy spirit'"
+        />
+        <button type="submit">Search</button>
+      </div>
     <div class="main-area">
     {% if galleries %}
         {% for gallery in galleries.items %}
@@ -46,7 +52,6 @@
     </div>
 {% endfor %}
 </div>
-
 <!-- QUOTE SECTION HERE-->
 <div class="quote">
     <h1><i class="fa fa-quote-left"></i></h1>

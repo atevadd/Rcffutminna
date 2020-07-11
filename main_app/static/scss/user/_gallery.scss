@@ -2,6 +2,7 @@
   display: block;
   width: 80%;
   margin: 5% auto 5%;
+  overflow:hidden;
 
   @media (min-width:500px) and (max-width:990px){
     width: 90%;
@@ -15,16 +16,23 @@
   .search-box{
     position: relative;
     display: block;
-    width: 50%;
+    width: 40%;
     margin: 30px auto 40px;
 
     @media(min-width:500px) and (max-width:990px){
-      width: 85%;
+      width: 75%;
       margin: 50px auto 30px;
     }
     @media(max-width:500px){
-      width: 80%;
+      width: 100%;
       margin: 50px auto 30px;
+    }
+
+    label{
+      display: block;
+      font-size: 18px;
+      padding: 0 0 0 10px;
+      font-weight: 500;
     }
 
     input{
@@ -46,12 +54,11 @@
         }
         @media(max-width:500px){
           font-size: 13px;
-        padding-right: 115px;
+          padding-right: 100px;
 
         }
 
         &:focus{
-            // border: 1px solid darken($color: #ccc, $amount: 40);
             border: 1px solid $primary-bg-color;
             transition: all 300ms ease-out;
         }
@@ -66,14 +73,18 @@
         color: white;
         border: none;
         position: absolute;
-        top: 6px;
+        top:33px;
         right: 6px;
 
         @media(min-width:500px) and (max-width:990px){
           padding: 11px 25px;
+        top:34px;
+
         }
         @media(max-width:500px){
           padding: 11px 25px;
+        top:34px;
+
         }
     }
 }

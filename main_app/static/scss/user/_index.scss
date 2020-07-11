@@ -43,6 +43,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+<<<<<<< HEAD
     @media (max-width: 414px) {
         padding: 10px 20px;
         text-align: center;
@@ -94,6 +95,81 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+=======
+  }
+
+  &.one {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .8)), url("../../static/img/rcflogo.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+    @media (max-width: 414px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)),
+        url("../../static/img/rcflogo.png") !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      transform:translate3d(0,0,0);
+      
+    }
+  }
+
+  &.two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)),
+      url("../../static/img/bg2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: cover;
+
+    @media (max-width: 414px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)),
+        url("../../static/img/bg2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &.three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)),
+      url("../../static/img/bg3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 414px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)),
+        url("../../static/img/bg3.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &.four {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)),
+      url("../../static/img/bg4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 414px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)),
+        url("../../static/img/bg4.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+>>>>>>> 2a29172f8fd8461de8316984746c96864d02235f
     }
     &.four {
         background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../static/img/bg4.jpg");
