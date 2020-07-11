@@ -2066,6 +2066,20 @@ a {
   margin: 30px auto 40px;
 }
 
+@media (min-width: 500px) and (max-width: 990px) {
+  .gallery-section .search-box {
+    width: 85%;
+    margin: 50px auto 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-section .search-box {
+    width: 80%;
+    margin: 50px auto 30px;
+  }
+}
+
 .gallery-section .search-box input {
   width: 100%;
   display: block;
@@ -2074,12 +2088,27 @@ a {
   position: relative;
   border: 1px solid #ccc;
   padding-left: 15px;
-  padding-right: 145px;
-  font-size: 16px;
+  padding-right: 138px;
+  font-size: 14px;
+  color: #333;
+}
+
+@media (min-width: 500px) and (max-width: 990px) {
+  .gallery-section .search-box input {
+    font-size: 14px;
+    padding-right: 138px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-section .search-box input {
+    font-size: 13px;
+    padding-right: 115px;
+  }
 }
 
 .gallery-section .search-box input:focus {
-  border: 1px solid #666666;
+  border: 1px solid #cf4a46;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
@@ -2095,6 +2124,18 @@ a {
   position: absolute;
   top: 6px;
   right: 6px;
+}
+
+@media (min-width: 500px) and (max-width: 990px) {
+  .gallery-section .search-box button {
+    padding: 11px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-section .search-box button {
+    padding: 11px 25px;
+  }
 }
 
 .gallery-section .main-area {
@@ -2151,7 +2192,7 @@ a {
 
 .gallery-section .main-area .gallery-thumbnail .meta-tag {
   display: block;
-  padding: 0 5px;
+  padding: 10px 5px;
 }
 
 .gallery-section .main-area .gallery-thumbnail .meta-tag ul {
@@ -2255,8 +2296,22 @@ a {
 .book-section .search-box {
   position: relative;
   display: block;
-  width: 50%;
-  margin: 50px auto 40px;
+  width: 40%;
+  margin: 30px auto 40px;
+}
+
+@media (min-width: 500px) and (max-width: 990px) {
+  .book-section .search-box {
+    width: 75%;
+    margin: 50px auto 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-section .search-box {
+    width: 90%;
+    margin: 50px auto 30px;
+  }
 }
 
 .book-section .search-box input {
@@ -2267,12 +2322,27 @@ a {
   position: relative;
   border: 1px solid #ccc;
   padding-left: 15px;
-  padding-right: 145px;
-  font-size: 16px;
+  padding-right: 138px;
+  font-size: 14px;
+  color: #333;
+}
+
+@media (min-width: 500px) and (max-width: 990px) {
+  .book-section .search-box input {
+    font-size: 14px;
+    padding-right: 138px;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-section .search-box input {
+    font-size: 13px;
+    padding-right: 115px;
+  }
 }
 
 .book-section .search-box input:focus {
-  border: 1px solid #666666;
+  border: 1px solid #cf4a46;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
@@ -2288,6 +2358,18 @@ a {
   position: absolute;
   top: 6px;
   right: 6px;
+}
+
+@media (min-width: 500px) and (max-width: 990px) {
+  .book-section .search-box button {
+    padding: 11px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-section .search-box button {
+    padding: 11px 25px;
+  }
 }
 
 .book-section .books {
@@ -2306,14 +2388,41 @@ a {
           justify-content: space-between;
 }
 
+@media (min-height: 500px) and (max-width: 990px) {
+  .book-section .books {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-section .books {
+    width: 100%;
+  }
+}
+
 .book-section .books .book-card {
   width: 30%;
   height: 100%;
   background-color: white;
-  -webkit-box-shadow: 0 6px 18px rgba(148, 148, 148, 0.664);
-          box-shadow: 0 6px 18px rgba(148, 148, 148, 0.664);
+  -webkit-box-shadow: 0 6px 18px rgba(148, 148, 148, 0.424);
+          box-shadow: 0 6px 18px rgba(148, 148, 148, 0.424);
   border-radius: 4px;
   margin-top: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .book-section .books .book-card {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-section .books .book-card {
+    width: 90%;
+  }
 }
 
 .book-section .books .book-card-img {
@@ -2356,10 +2465,10 @@ a {
   font-size: 12px;
   font-style: italic;
   color: gray;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.book-section .books .book-card-body button {
+.book-section .books .book-card-body .download {
   display: inline-block;
   padding: 10px 35px;
   color: #cf4a46;
@@ -2370,14 +2479,14 @@ a {
   background-color: transparent;
 }
 
-.book-section .books .book-card-body button:hover {
+.book-section .books .book-card-body .download:hover {
   background-color: #cf4a46;
   color: white;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
 
-.book-section .books .book-card-body button i {
+.book-section .books .book-card-body .download i {
   padding-right: 10px;
 }
 

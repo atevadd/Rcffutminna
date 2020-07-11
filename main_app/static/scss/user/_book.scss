@@ -4,41 +4,69 @@
     display: block;
 
     .search-box{
-        position: relative;
-        display: block;
-        width: 50%;
-        margin: 50px auto 40px;
-
-        input{
-            width: 100%;
-            display: block;
-            height: 55px;
-            border-radius: 50px;
-            position: relative;
-            border: 1px solid #ccc;
-            padding-left: 15px;
-            padding-right: 145px;
-            font-size: 16px;
-
-            &:focus{
-                border: 1px solid darken($color: #ccc, $amount: 40);
-                transition: all 300ms ease-out;
-            }
-        }
-
-        button{
-            display: inline-block;
-            padding: 11px 35px;
-            border-radius: 50px;
-            outline: none;
-            background-color: $primary-bg-color;
-            color: white;
-            border: none;
-            position: absolute;
-            top: 6px;
-            right: 6px;
-        }
-    }
+      position: relative;
+      display: block;
+      width: 40%;
+      margin: 30px auto 40px;
+  
+      @media(min-width:500px) and (max-width:990px){
+        width: 75%;
+        margin: 50px auto 30px;
+      }
+      @media(max-width:500px){
+        width: 90%;
+        margin: 50px auto 30px;
+      }
+  
+      input{
+          width: 100%;
+          display: block;
+          height: 55px;
+          border-radius: 50px;
+          position: relative;
+          border: 1px solid #ccc;
+          padding-left: 15px;
+          padding-right: 138px;
+          font-size: 14px;
+          color: $dark-text-color;
+  
+          @media(min-width:500px) and (max-width:990px){
+            font-size: 14px;
+          padding-right: 138px;
+  
+          }
+          @media(max-width:500px){
+            font-size: 13px;
+          padding-right: 115px;
+  
+          }
+  
+          &:focus{
+              border: 1px solid $primary-bg-color;
+              transition: all 300ms ease-out;
+          }
+      }
+  
+      button{
+          display: inline-block;
+          padding: 11px 35px;
+          border-radius: 50px;
+          outline: none;
+          background-color: $primary-bg-color;
+          color: white;
+          border: none;
+          position: absolute;
+          top: 6px;
+          right: 6px;
+  
+          @media(min-width:500px) and (max-width:990px){
+            padding: 11px 25px;
+          }
+          @media(max-width:500px){
+            padding: 11px 25px;
+          }
+      }
+  }
 
     .books{
         width: 85%;
@@ -48,13 +76,29 @@
         align-items: center;
         justify-content: space-between;
 
+        @media(min-height:500px) and (max-width:990px){
+          width: 100%;
+          justify-content: space-evenly;
+        }
+        @media(max-width:500px){
+          width: 100%;
+        }
+
         .book-card{
             width: 30%;
             height: 100%;
             background-color: white;
-            box-shadow: 0 6px 18px rgba(148, 148, 148, 0.664);
+            box-shadow: 0 6px 18px rgba(148, 148, 148, 0.424);
             border-radius: 4px;
             margin-top: 50px;
+
+            @media(min-width:768px) and (max-width:990px){
+              width: 40%;
+            }
+
+          @media (max-width:768px){
+            width: 90%;
+          }
 
             &-img{
                 width: 100%;
@@ -95,9 +139,9 @@
                     font-style: italic;
                     color: lighten($color: $dark-text-color, $amount: 30);
                     // text-align: right;
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                 }
-                button{
+                .download{
                     display: inline-block;
                     padding: 10px 35px;
                     color: $primary-bg-color;
