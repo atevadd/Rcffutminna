@@ -1,0 +1,231 @@
+.book-section{
+    width: 100%;
+    margin: 50px auto 30px;
+    display: block;
+
+    .search-box{
+      position: relative;
+      display: block;
+      width: 40%;
+      margin: 30px auto 40px;
+  
+      @media(min-width:500px) and (max-width:990px){
+        width: 75%;
+        margin: 50px auto 30px;
+      }
+      @media(max-width:500px){
+        width: 90%;
+        margin: 50px auto 30px;
+      }
+  
+      input{
+          width: 100%;
+          display: block;
+          height: 55px;
+          border-radius: 50px;
+          position: relative;
+          border: 1px solid #ccc;
+          padding-left: 15px;
+          padding-right: 138px;
+          font-size: 14px;
+          color: $dark-text-color;
+  
+          @media(min-width:500px) and (max-width:990px){
+            font-size: 14px;
+          padding-right: 138px;
+  
+          }
+          @media(max-width:500px){
+            font-size: 13px;
+          padding-right: 115px;
+  
+          }
+  
+          &:focus{
+              border: 1px solid $primary-bg-color;
+              transition: all 300ms ease-out;
+          }
+      }
+  
+      button{
+          display: inline-block;
+          padding: 11px 35px;
+          border-radius: 50px;
+          outline: none;
+          background-color: $primary-bg-color;
+          color: white;
+          border: none;
+          position: absolute;
+          top: 6px;
+          right: 6px;
+  
+          @media(min-width:500px) and (max-width:990px){
+            padding: 11px 25px;
+          }
+          @media(max-width:500px){
+            padding: 11px 25px;
+          }
+      }
+  }
+
+    .books{
+        width: 85%;
+        margin: 30px auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(min-height:500px) and (max-width:990px){
+          width: 100%;
+          justify-content: space-evenly;
+        }
+        @media(max-width:500px){
+          width: 100%;
+        }
+
+        .book-card{
+            width: 30%;
+            height: 100%;
+            background-color: white;
+            box-shadow: 0 6px 18px rgba(148, 148, 148, 0.424);
+            border-radius: 4px;
+            margin-top: 50px;
+
+            @media(min-width:768px) and (max-width:990px){
+              width: 40%;
+            }
+
+          @media (max-width:768px){
+            width: 90%;
+          }
+
+            &-img{
+                width: 100%;
+                height: 180px;
+                border-radius: 4px 4px 0 0 ;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 4px 4px 0 0 ;
+                }
+            }
+
+            &-body{
+                padding: 12px 12px 18px;
+
+                .tag{
+                    font-size: 12px;
+                    margin-top: 8px;
+                    padding: 5px 15px;
+                    display: inline-block;
+                    background-color: $primary-bg-color;
+                    color: $light-text-color;
+                    border-radius: 4px;
+                    font-weight: 400;
+                    margin-bottom: 18px;
+                }
+
+                .title{
+                    font-weight: 600;
+                    font-size: 1.7rem;
+                    line-height: 1.2;
+                    color: $dark-text-color;
+                    margin-bottom: 3px;
+                }
+                .author{
+                    font-size: 12px;
+                    font-style: italic;
+                    color: lighten($color: $dark-text-color, $amount: 30);
+                    // text-align: right;
+                    margin-bottom: 30px;
+                }
+                .download{
+                    display: inline-block;
+                    padding: 10px 35px;
+                    color: $primary-bg-color;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    border: 1px solid $primary-bg-color;
+                    outline: none;
+                    background-color: transparent;
+                    
+                    &:hover{
+                        background-color: $primary-bg-color;
+                        color: white;
+                        transition: all 300ms ease-out;
+                    }
+                    i{
+                        padding-right: 10px;
+                    }
+
+                }
+            }
+        }
+    }
+    .pagination {
+        width: fit-content;
+        display: block;
+        margin: 80px auto 40px;
+        // border: 1px solid red;
+        background-color: #fff;
+        box-shadow: 3px 3px 13px rgba(204, 204, 204, 0.657);
+        padding: 10px 15px;
+        border-radius: 4px;
+    
+        @media (max-width: 500px) {
+          width: fit-content;
+          padding: 10px 0;
+          margin: 30px auto 30px;
+        }
+    
+        ul {
+          display: inline-block;
+          list-style: none;
+          text-align: center;
+    
+          li {
+            display: inline-block;
+            padding: 0 7px;
+    
+            .pagination-control {
+              color: $dark-text-color;
+              padding: 3px 10px;
+    
+              &:hover {
+                color: $dark-text-color;
+                background-color: #ccc;
+                // padding: 3px 10px;
+                border-radius: 4px;
+              }
+            }
+    
+            .pagination-num {
+              color: $dark-text-color;
+              padding: 3px 10px;
+    
+              &:hover {
+                color: $dark-text-color;
+                background-color: #ccc;
+                border-radius: 4px;
+              }
+    
+              &:active {
+                color: #fff;
+                background-color: $primary-bg-color;
+                padding: 3px 10px;
+                border-radius: 4px;
+              }
+    
+              &.active {
+                color: #fff;
+                background-color: $primary-bg-color;
+                padding: 3px 10px;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+      }
+}

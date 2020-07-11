@@ -20,7 +20,7 @@ a {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: $primary-bg-color;
+    background-color: $dark-text-color;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -120,4 +120,11 @@ a {
 @import "user/index";
 @import "user/footer";
 @import "user/event";
+<<<<<<< HEAD
 @import "user/alumni";
+=======
+@import "user/alumni";
+@import "user/gallery";
+@import "user/book";
+
+>>>>>>> 632661a906dc24522366a50cb77ee36065b6d742

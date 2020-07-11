@@ -1,5 +1,53 @@
+
 {% extends 'user/base.html' %} {% block contents %}
 <section id="header">
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Rcffutminna</title>
+
+  <!-- FONTAWESOME CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="../../static/css/user.css" />
+</head>
+
+<body>
+  <!-- PRELOADER FOR THE WEBSITE -->
+  <!-- <div class="pre-loader">
+        <div class="loader">
+            <img src="../../static/img/rcflogo.png" alt="">
+        </div>
+    </div> -->
+  <!-- THE TOP NAVIGATION -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="brand-logo">Rcffutminna</a>
+
+      <span class="toggler" id="toggler">
+        <i class="fa fa-bars"></i>
+      </span>
+
+      <ul class="nav-links" id="links">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Sermons</a></li>
+          <li><a href="event.html">Events</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- ENDS HERE  -->
+
+  <section id="header">
+>>>>>>> 632661a906dc24522366a50cb77ee36065b6d742
     <div class="event-header">
         <h1>Gallery</h1>
         <p class="breadcrumb"><a href="index.html">Home</a> / Gallery</p>
@@ -8,9 +56,8 @@
 
 <div class="gallery-section">
     <div class="search-box">
-        <label for="gallerysearch">Search</label>
-        <input type="search" name="gal-serach" id="gallerysearch" placeholder="E.g Sunday service.">
-        <button type="submit"><i class="fa fa-search"></i></button>
+      <input type="search" name="booksearch" id="booksearch" placeholder="Search e.g Good morning Holy Spirit">
+      <button type="submit">Search</button>
     </div>
 
     <div class="main-area">
