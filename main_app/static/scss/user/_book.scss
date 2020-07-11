@@ -2,6 +2,7 @@
     width: 100%;
     margin: 50px auto 30px;
     display: block;
+    overflow: hidden;
 
     .search-box{
       position: relative;
@@ -16,6 +17,13 @@
       @media(max-width:500px){
         width: 90%;
         margin: 50px auto 30px;
+      }
+
+      label{
+        display: block;
+        font-size: 18px;
+        padding: 0 0 0 10px;
+        font-weight: 500;
       }
   
       input{
@@ -37,8 +45,8 @@
           }
           @media(max-width:500px){
             font-size: 13px;
-          padding-right: 115px;
-  
+            padding-right: 100px;
+
           }
   
           &:focus{
@@ -56,14 +64,18 @@
           color: white;
           border: none;
           position: absolute;
-          top: 6px;
+          top:33px;
           right: 6px;
   
           @media(min-width:500px) and (max-width:990px){
             padding: 11px 25px;
+          top:34px;
+
           }
           @media(max-width:500px){
             padding: 11px 25px;
+          top:34px;
+
           }
       }
   }
@@ -139,7 +151,7 @@
                     font-style: italic;
                     color: lighten($color: $dark-text-color, $amount: 30);
                     // text-align: right;
-                    margin-bottom: 30px;
+                    margin-bottom: 35px;
                 }
                 .download{
                     display: inline-block;
