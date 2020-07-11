@@ -35,7 +35,7 @@
         <ul>
         {%if page_num%}
           {%if galleries.page == page_num%}
-            <li><a href="{{url_for('view_gallery', page=page_num)}}" class="pagination-control active">{{page_num}}</a></li>
+            <li><a href="{{url_for('view_gallery', page=page_num)}}" class="pagination-control">{{page_num}}</a></li>
           {% else %}
             <li><a href="{{url_for('view_gallery', page=page_num)}}" class="pagination-control">{{page_num}}</a></li>
           {% endif %}

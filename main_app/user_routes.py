@@ -14,6 +14,15 @@ def index():
 #gallery page
 @app.route("/rcffutminna/galleries", methods=['GET','POST'])
 def view_gallery():
+    if request.method == "POST":
+        gal_search = request.form['gal-search']
+        galleries= Gallery.query.order_by(Gallery.id.desc()).paginate(page=page,per_page=9).filter_by(gal_search)
+        return render_template("user/gallery.html", galleries=galleries)
     page = request.args.get('page', 1, type=int)
     galleries = Gallery.query.order_by(Gallery.id.desc()).paginate(page=page,per_page=9)
     return render_template("user/gallery.html",galleries=galleries)
+
+
+@app.route("/rcffutminna/alumni/index")
+def show():
+    return render_template('user/alumni.html')
