@@ -1,0 +1,187 @@
+.sermon-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 40px auto;
+
+    @media(min-width:768px) and (max-width:990px){
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    @media(max-width:768px){
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+
+    .search-box{
+        position: relative;
+        display: block;
+        width: 40%;
+        margin: 30px auto 40px;
+    
+        @media(min-width:500px) and (max-width:990px){
+          width: 75%;
+          margin: 50px auto 30px;
+        }
+        @media(max-width:500px){
+          width: 100%;
+          margin: 50px auto 30px;
+        }
+    
+        label{
+          display: block;
+          font-size: 18px;
+          padding: 0 0 0 10px;
+          font-weight: 500;
+        }
+    
+        input{
+            width: 100%;
+            display: block;
+            height: 55px;
+            border-radius: 50px;
+            position: relative;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            padding-right: 138px;
+            font-size: 14px;
+            color: $dark-text-color;
+    
+            @media(min-width:500px) and (max-width:990px){
+              font-size: 14px;
+            padding-right: 138px;
+    
+            }
+            @media(max-width:500px){
+              font-size: 13px;
+              padding-right: 100px;
+    
+            }
+    
+            &:focus{
+                border: 1px solid $primary-bg-color;
+                transition: all 300ms ease-out;
+            }
+        }
+    
+        button{
+            display: inline-block;
+            padding: 11px 35px;
+            border-radius: 50px;
+            outline: none;
+            background-color: $primary-bg-color;
+            color: white;
+            border: none;
+            position: absolute;
+            top:33px;
+            right: 6px;
+    
+            @media(min-width:500px) and (max-width:990px){
+              padding: 11px 25px;
+            top:34px;
+    
+            }
+            @media(max-width:500px){
+              padding: 11px 25px;
+            top:34px;
+    
+            }
+        }
+    }
+
+    .sermon {
+        display: block;
+        position: relative;
+        width: 28%;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0 6px 18px rgba(148, 148, 148, 0.424);
+        margin-top: 30px;
+        border-radius: 4px;
+
+        @media(min-width:768px) and (max-width:990px){
+            width: 42%;
+        }
+        @media(max-width:768px){
+            width: 90%;
+            margin: 30px auto 0;
+        }
+
+        &-image {
+            position: relative;
+            width: 100%;
+            height: 200px;
+
+            img {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%; 
+                border-radius: 4px 4px 0 0;
+                filter: blur(1.1px);            
+            }
+
+            .tag {
+                position: absolute;
+                top: 35px;
+                left: 0;
+                font-size: 16px;
+                background-color: $primary-bg-color;
+                padding: 5px 15px;
+                color: white;
+                border-radius: 0 4px 4px 0;
+                font-weight: 500;
+
+            }
+        }
+        &-body{
+            padding: 15px 12px;
+
+            .title{
+                font-size: 1.9rem;
+                font-weight: 600;
+                line-height: 1.2;
+                color: $dark-text-color;
+                word-wrap: break-word;
+                text-overflow: clip;
+                overflow: hidden;
+            }
+            .meta-info{
+                list-style: none;
+                margin-top: 10px;
+
+                li{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: lighten($color: $dark-text-color, $amount: 20);
+                    padding-right: 10px;
+                    
+
+                    i{
+                        padding-right: 7px;
+                        color: $primary-bg-color;
+                    }
+                }
+            }
+            .button{
+                display: inline-block;
+                padding: 10px 25px;
+                border: 1px solid $primary-bg-color;
+                color: $primary-bg-color;
+                border-radius: 4px;
+                margin-top: 45px;
+                // margin-bottom: 15px;
+
+                &:hover{
+                    color: $light-text-color;
+                    background-color: $primary-bg-color;
+                    transition: all 400ms ease-out;
+                }
+            }
+        }
+    }
+}
