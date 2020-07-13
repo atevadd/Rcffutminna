@@ -1,13 +1,19 @@
 // FROM INFO SECTION IN THE ALUNMI PAGE
 .info{
-    margin: 5% 0 0 0;
+    margin: 5% 0 0 20px;
 
     @media(max-width:414px){
         margin: 8% 0 0 0;
     }
     .info-text{
-        width: 100%;
+        width: 40%;
+        display: block;
+        margin:  0 auto;
         text-align: center;
+
+        @media(max-width:990px){
+            width: 100%;
+        }
 
         h1{
             font-size: 2.2rem;

@@ -28,6 +28,10 @@ def save_img(img):
 def index():
     return render_template("admin/index.html")
 
+@app.route("/admin/alumni", methods=['GET', 'POST'])
+def alumni():
+    return render_template("admin/alumni.html")
+
 @app.route("/admin/announcement", methods=['GET','POST'])
 def announcement():
     announcements = Announcement.query.all()
