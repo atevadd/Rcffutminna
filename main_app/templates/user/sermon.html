@@ -1,308 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'user/base.html' %} 
+{% block contents %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sermon - Rcffutminna</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="../../static/css/user.css" />
-</head>
-
-<body>
-  <!-- PRELOADER FOR THE WEBSITE -->
-  <div class="pre-loader">
-        <div class="loader">
-            <img src="../../static/img/rcflogo.png" alt="">
+    <section id="header">
+        <div class="event-header">
+        <h1>Sermon</h1>
+        <p class="breadcrumb"><a href="{{url_for('index')}}">Home</a> / Sermon</p>
         </div>
+    </section>
+
+    <div class="search-box">
+        <label for="booksearch">Search</label>
+        <input
+        type="search"
+        name="booksearch"
+        id="booksearch"
+        placeholder="E.g 'Good morning Holy spirit'"
+        />
+        <button type="submit">Search</button>
+    </div>
+
+    <div class="sermon-section">
+    {% for message in messages.items %}
+        <div class="sermon">
+            <div class="sermon-image">
+                <img src="{{url_for('static', filename='img/bg4.jpg')}}" alt="" width="100%">
+                <h5 class="tag">Sermon</h5>
+            </div>
+            <div class="sermon-body">
+                <h1 class="title">{{message.title}}</h1>
+                <ul class="meta-info">
+                    <li><i class="fa fa-user"></i>{{message.minister}}</li>
+                    <li><i class="fa fa-clock-o"></i>{{message.date.strftime('%d, %B %Y')}}</li>
+                    <li><i class="fa fa-tags"></i>{{message.tag}}</li>
+                </ul>
+                <a href="{{url_for('static', filename='message_audios/'+message.audio)}}" download class="button">Download sermon</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    <div class="pagination">
+{% for page_num in messages.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            <ul>
+            {%if page_num%}
+            {%if messages.page == page_num%}
+                <li><a href="{{url_for('sermons', page=page_num)}}" class="pagination-num active">{{page_num}}</a></li>
+            {% else %}
+                <li><a href="{{url_for('sermons', page=page_num)}}" class="pagination-num">{{page_num}}</a></li>
+            {% endif %}
+            {% else %}
+            <li><a href="#" class="pagination-num">....</a></li>
+            {% endif %}
+            </ul>
+{% endfor %}
     </div>
 
 
-  <!-- THE TOP NAVIGATION -->
-  <nav class="nav">
-    <div class="container">
-      <a href="index.html" class="brand-logo">Rcffutminna</a>
-
-      <span class="toggler" id="toggler">
-        <i class="fa fa-bars"></i>
-      </span>
-
-      <ul class="nav-links" id="links">
-        <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="sermon.html">Sermons</a></li>
-          <li><a href="event.html">Events</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="alumni.html">Alumni</a></li>
-      </ul>
-    </div>
-  </nav>
-  <!-- ENDS HERE  -->
-
-  <section id="header">
-    <div class="event-header">
-      <h1>Sermon</h1>
-      <p class="breadcrumb"><a href="index.html">Home</a> / Sermon</p>
-    </div>
-  </section>
-
-  <div class="search-box">
-    <label for="booksearch">Search</label>
-    <input
-      type="search"
-      name="booksearch"
-      id="booksearch"
-      placeholder="E.g 'Good morning Holy spirit'"
-    />
-    <button type="submit">Search</button>
-  </div>
-
-  <div class="sermon-section">
-      <div class="sermon">
-          <div class="sermon-image">
-              <img src="../../static/img/bg4.jpg" alt="" width="100%">
-              <h5 class="tag">Sermon</h5>
-          </div>
-          <div class="sermon-body">
-              <h1 class="title">Kingdom Mindset</h1>
-              <ul class="meta-info">
-                  <li><i class="fa fa-user"></i>Sam Adeyemi</li>
-                  <li><i class="fa fa-clock-o"></i>14 july, 2020</li>
-                  <li><i class="fa fa-tags"></i>Sunday service</li>
-              </ul>
-              <a href="#" class="button">Download sermon</a>
-          </div>
-      </div>
-      <div class="sermon">
-          <div class="sermon-image">
-              <img src="../../static/img/bg4.jpg" alt="" width="100%">
-              <h5 class="tag">Sermon</h5>
-          </div>
-          <div class="sermon-body">
-              <h1 class="title">Kingdom Mindset</h1>
-              <ul class="meta-info">
-                  <li><i class="fa fa-user"></i>Sam Adeyemi</li>
-                  <li><i class="fa fa-clock-o"></i>14 july, 2020</li>
-                  <li><i class="fa fa-tags"></i>Sunday service</li>
-              </ul>
-              <a href="#" class="button">Download sermon</a>
-          </div>
-      </div>
-      <div class="sermon">
-          <div class="sermon-image">
-              <img src="../../static/img/bg4.jpg" alt="" width="100%">
-              <h5 class="tag">Sermon</h5>
-          </div>
-          <div class="sermon-body">
-              <h1 class="title">Kingdom Mindset</h1>
-              <ul class="meta-info">
-                  <li><i class="fa fa-user"></i>Sam Adeyemi</li>
-                  <li><i class="fa fa-clock-o"></i>14 july, 2020</li>
-                  <li><i class="fa fa-tags"></i>Sunday service</li>
-              </ul>
-              <a href="#" class="button">Download sermon</a>
-          </div>
-      </div>
-      <div class="sermon">
-          <div class="sermon-image">
-              <img src="../../static/img/bg4.jpg" alt="" width="100%">
-              <h5 class="tag">Sermon</h5>
-          </div>
-          <div class="sermon-body">
-              <h1 class="title">Kingdom Mindset</h1>
-              <ul class="meta-info">
-                  <li><i class="fa fa-user"></i>Sam Adeyemi</li>
-                  <li><i class="fa fa-clock-o"></i>14 july, 2020</li>
-                  <li><i class="fa fa-tags"></i>Sunday service</li>
-              </ul>
-              <a href="#" class="button">Download sermon</a>
-          </div>
-      </div>
-      <div class="sermon">
-          <div class="sermon-image">
-              <img src="../../static/img/bg4.jpg" alt="" width="100%">
-              <h5 class="tag">Sermon</h5>
-          </div>
-          <div class="sermon-body">
-              <h1 class="title">Kingdom Mindset</h1>
-              <ul class="meta-info">
-                  <li><i class="fa fa-user"></i>Sam Adeyemi</li>
-                  <li><i class="fa fa-clock-o"></i>14 july, 2020</li>
-                  <li><i class="fa fa-tags"></i>Sunday service</li>
-              </ul>
-              <a href="#" class="button">Download sermon</a>
-          </div>
-      </div>
-      <div class="sermon">
-          <div class="sermon-image">
-              <img src="../../static/img/bg4.jpg" alt="" width="100%">
-              <h5 class="tag">Sermon</h5>
-          </div>
-          <div class="sermon-body">
-              <h1 class="title">Kingdom Mindset</h1>
-              <ul class="meta-info">
-                  <li><i class="fa fa-user"></i>Sam Adeyemi</li>
-                  <li><i class="fa fa-clock-o"></i>14 july, 2020</li>
-                  <li><i class="fa fa-tags"></i>Sunday service</li>
-              </ul>
-              <a href="#" class="button">Download sermon</a>
-          </div>
-      </div>
-  </div>
-
-  <div class="pagination">
-    <ul>
-      <li>
-        <a href="#" class="pagination-control"
-          ><i class="fa fa-angle-left"></i
-        ></a>
-      </li>
-      <li><a href="#" class="pagination-num">1</a></li>
-      <li><a href="#" class="pagination-num active">2</a></li>
-      <li><a href="#" class="pagination-num">3</a></li>
-      <li><a href="#" class="pagination-num">.......</a></li>
-      <li><a href="#" class="pagination-num">10</a></li>
-      <li>
-        <a href="#" class="pagination-control"
-          ><i class="fa fa-angle-right"></i
-        ></a>
-      </li>
-    </ul>
-  </div>
-
-
-      <!-- QUOTE SECTION HERE-->
-      <div class="quote">
-        <h1><i class="fa fa-quote-left"></i></h1>
-        <h2>You are the only Bible some unbelievers will ever read.</h2>
-        <cite>john macarthur</cite>
-      </div>
-  
-  
-    <!-- THE FOOTER SECTION STARTS HERE ============-->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-logo">
-            <img src="../../static/img/rcflogo.png" alt="rcffutminna logo" />
-          </div>
-          <div class="footer-contact">
-            <h2>Gidan Kwano Campus</h2>
-            <ul>
-              <li>
-                <i class="fa fa-map-marker"></i>Behind SMS lodge, Gidan Kwano
-              </li>
-              <li><i class="fa fa-phone"></i>080-xxxx-xxxx, 090-xxxx-xxxx</li>
-              <li>
-                <i class="fa fa-envelope"></i><a href="mailto:info@rcffutminna.com">info@rcffutminna.com</a>
-              </li>
-              <li><i class="fa fa-globe"></i>www.rcffutminna.com</li>
-            </ul>
-          </div>
-          <div class="footer-contact">
-            <h2>Bosso Campus</h2>
-            <ul>
-              <li>
-                <i class="fa fa-map-marker"></i>Behind Wasika primary school,
-                Bosso
-              </li>
-              <li><i class="fa fa-phone"></i>080-xxxx-xxxx, 090-xxxx-xxxx</li>
-              <li><i class="fa fa-envelope"></i>info@rcffutminna.com</li>
-              <li><i class="fa fa-globe"></i>www.rcffutminna.com</li>
-            </ul>
-          </div>
-    
-          <div class="useful-links">
-            <h2>Online Giving</h2>
-            <ul>
-              <li><i class="fa fa-chevron-right"></i><a href="#">Account Number: 021209392</a></li>
-              <li>
-                <i class="fa fa-chevron-right"></i><a href="#">Account Name: RCF FUTMINNA GK CAMPUS</a>
-              </li>
-              <li><i class="fa fa-chevron-right"></i><a href="#">Bank Name: GTBANK</a></li>
-            </ul>
-          </div>
-          <div class="social-media">
-            <h2>Follow us on:</h2>
-            <ul class="social-media">
-              <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-telegram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-            </ul>
-          </div>
+        <!-- QUOTE SECTION HERE-->
+        <div class="quote">
+            <h1><i class="fa fa-quote-left"></i></h1>
+            <h2>You are the only Bible some unbelievers will ever read.</h2>
+            <cite>john macarthur</cite>
         </div>
-    
-        <div class="main-footer">
-          <p>
-            <i class="fa fa-copyright">
-              <span id="date">2012</span>
-              <span class="footer-name">RCFFUTMINNA. </span></i>All rights reserved
-          </p>
-        </div>
-      </footer>
-      <!-- ENDS HERE ============== -->
-
-    <!-- BACK TO TOP BUTTON -->
-    <a href="#" class="backtotop" id="totop"><i class="fa fa-angle-up"></i></a>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../../static/js/user.js" defer></script>
-    <script>
-      $(document).ready(function () {
-        //Preloader
-        preloaderFadeOutTime = 400;
-        function hidePreloader() {
-          var preloader = $(".pre-loader");
-          preloader.fadeOut(preloaderFadeOutTime);
-        }
-        setInterval(hidePreloader, 1000);
-      });
-    </script>
-    <script>
-      var footerDate = document.getElementById("date");
-      var date = new Date();
-  
-      footerDate.innerHTML = date.getFullYear();
-
-      var totop = document.getElementById("totop"); //back to top button
-
-        
-
-        window.onscroll = function(){
-            toTop();
-        };
-
-        // the function that shows the back to top button on scroll
-        function toTop(){
-            if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
-                totop.style.display = "flex";
-            }else{
-                totop.style.display = "none";
-            }
-        }
-
-        //the function that move the page to the top when the back to top button is click
-        function topFunction(){
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-        //the event listener that moves the page to the top
-        totop.addEventListener("click", topFunction);
-        
-    </script>
-  </body>
-  
-  </html>
+{% endblock contents %}
