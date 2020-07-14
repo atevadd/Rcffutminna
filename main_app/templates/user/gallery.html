@@ -1,8 +1,9 @@
-{% extends 'user/base.html' %} {% block contents %}
+{% extends 'user/base.html' %} 
+{% block contents %}
   <section id="header">
     <div class="event-header">
         <h1>Gallery</h1>
-        <p class="breadcrumb"><a href="index.html">Home</a> / Gallery</p>
+        <p class="breadcrumb"><a href="{{url_for('index')}}">Home</a> / Gallery</p>
     </div>
 </section>
 
@@ -48,6 +49,7 @@
         {% endif %}
         </ul>
     </div>
+{% endfor %}
   </div>
 <!-- QUOTE SECTION HERE-->
 <div class="quote">
@@ -55,6 +57,5 @@
     <h2>You are the only Bible some unbelievers will ever read.</h2>
     <cite>john macarthur</cite>
 </div>
-
 
 {% endblock contents %}
