@@ -39,7 +39,7 @@ def save_book(book):
 def admin_index():
     galleries = Gallery.query.order_by(Gallery.id.desc()).limit(3).all()
     messages = Message.query.order_by(Message.id.desc()).limit(3).all()
-    return render_template("admin/index.html", messages=messages, galleries=galleries)
+    return render_template("admin/index.html", messages=messages, galleries=galleries, title="Home")
 
 @app.route("/admin/announcement", methods=['GET','POST'])
 @login_required
@@ -51,7 +51,7 @@ def announcement():
         new_announcement.save_to_database()
         flash("Annoucement Created Successfully", "success")
         return redirect(url_for('announcement'))
-    return render_template('admin/announcement.html', announcements=announcements)
+    return render_template('admin/announcement.html', announcements=announcements,title="Announcements")
 
 @app.route('/admin/announcement/<int:id>/edit', methods=['GET','POST'])
 @login_required
@@ -72,7 +72,7 @@ def edit_announcement(id):
             db.session.commit()
             flash('Announcement Updated', "success")
             return redirect(url_for('announcement'))
-    return render_template('admin/edit_announcement.html', announcement=announcement)
+    return render_template('admin/edit_announcement.html', announcement=announcement, title="Edit Annoucement")
 
 @app.route('/admin/announcement/<int:id>/delete')
 @login_required
@@ -93,7 +93,7 @@ def books():
         new_book.save_to_database()
         flash("Book Added Successfully", "success")
         return redirect(url_for('books'))
-    return render_template('admin/books.html', books=books)
+    return render_template('admin/books.html', books=books,title="Add Books")
 
 @app.route('/admin/books/<int:id>/edit', methods=['GET','POST'])
 @login_required
@@ -114,7 +114,7 @@ def edit_book(id):
             db.session.commit()
             flash('Book Updated', "success")
             return redirect(url_for('books'))
-    return render_template('admin/edit_book.html', book=book)
+    return render_template('admin/edit_book.html', book=book, title="Edit Books")
 
 @app.route('/admin/books/<int:id>/delete')
 @login_required
@@ -136,7 +136,7 @@ def gallery():
         new_gallery.save_to_database()
         flash("Picture Added Sucessfully", "success")
         return redirect(url_for('gallery'))
-    return render_template('admin/gallery.html', galleries=galleries)
+    return render_template('admin/gallery.html', galleries=galleries,title="Gallery")
 
 @app.route('/admin/gallery/<int:id>/edit', methods=['GET','POST'])
 @login_required
@@ -156,7 +156,7 @@ def edit_gallery(id):
             db.session.commit()
             flash('Picture Updated', "success")
             return redirect(url_for('gallery'))
-    return render_template('admin/edit_gallery.html', gallery=gallery)
+    return render_template('admin/edit_gallery.html', gallery=gallery,title="Edit Image")
 
 @app.route('/admin/gallery/<int:id>/delete')
 @login_required
@@ -184,7 +184,7 @@ def messages():
         message.save_to_database()
         flash("Message Added Successfully", "success")
         return redirect(url_for('messages'))
-    return render_template('admin/message.html', messages=messages)
+    return render_template('admin/message.html', messages=messages,title="Sermons")
 
 @app.route('/admin/messages/<int:id>/edit', methods=['GET','POST'])
 @login_required
@@ -210,7 +210,7 @@ def edit_message(id):
             db.session.commit()
             flash('Message Updated', "success")
             return redirect(url_for('messages'))
-    return render_template('admin/edit_message.html', message=message)
+    return render_template('admin/edit_message.html', message=message, title="Edit Sermon")
 
 @app.route('/admin/messages/<int:id>/delete')
 @login_required
@@ -230,7 +230,7 @@ def testimony():
         testimony.save_to_database()
         flash("Testimony added successfully", "success")
         return redirect(url_for('testimony'))
-    return render_template('admin/testimony.html', testimonies=testimonies)
+    return render_template('admin/testimony.html', testimonies=testimonies, title="Testimonies")
 
 @app.route('/admin/testimonies/<int:id>/edit', methods=['GET','POST'])
 @login_required
@@ -242,7 +242,7 @@ def edit_testimony(id):
         db.session.commit()
         flash('Testimony Updated', "success")
         return redirect(url_for('testimony'))
-    return render_template('admin/edit_testimony.html', testimony=testimony)
+    return render_template('admin/edit_testimony.html', testimony=testimony,title="Edit testimony")
 
 @app.route('/admin/testimonies/<int:id>/delete')
 @login_required
@@ -264,7 +264,7 @@ def login():
         else:
             flash("Invalid Username or Password","danger")
             return redirect(url_for('login'))
-    return render_template("admin/login.html")
+    return render_template("admin/login.html",title="DashBoard Login")
 
 
 @app.route('/admin/logout')
