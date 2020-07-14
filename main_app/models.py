@@ -130,3 +130,40 @@ class User(db.Model, UserMixin):
     def remove_from_database(self) -> None:
         db.session.delete(self)
         db.session.commit()
+
+
+#ALUMNI MODEL
+class Alumni(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(50))
+    last_name = db.Column(db.String(50))
+    email = db.Column(db.String(50), unique=True)
+    phone_number = db.Column(db.String(20))
+    unit = db.Column(db.String(20))
+    role = db.Column(db.String(50))
+    
+    def __str__(self):
+        return self.first_name
+    
+    def save_to_database(self) -> None:
+        db.session.add(self)
+        db.session.commit()
+    
+    def remove_from_database(self) -> None:
+        db.session.delete(self)
+        db.session.commit()
+
+#CONTACT MODEL
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    email = db.Column(db.String(100))
+    message = db.Column(db.Text)
+    
+    def save_to_database(self) -> None:
+        db.session.add(self)
+        db.session.commit()
+    
+    def remove_from_database(self) -> None:
+        db.session.delete(self)
+        db.session.commit()
