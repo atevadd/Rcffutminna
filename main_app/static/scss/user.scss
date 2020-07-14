@@ -89,6 +89,129 @@ a {
     }
 }
 
+//THE SEARCH BAR DESIGN
+.search-box {
+    position: relative;
+    display: block;
+    width: 40%;
+    margin: 40px auto 40px;
+    @media(min-width: 500px) and (max-width: 990px) {
+        width: 75%;
+        margin: 50px auto 30px;
+    }
+    @media(max-width:500px) {
+        width: 100%;
+        margin: 50px auto 30px;
+    }
+    label {
+        display: block;
+        font-size: 18px;
+        padding: 0 0 0 10px;
+        font-weight: 500;
+    }
+    input {
+        width: 100%;
+        display: block;
+        height: 55px;
+        border-radius: 50px;
+        position: relative;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        padding-right: 138px;
+        font-size: 14px;
+        color: $dark-text-color;
+        @media(min-width: 500px) and (max-width: 990px) {
+            font-size: 14px;
+            padding-right: 138px;
+        }
+        @media(max-width:500px) {
+            font-size: 13px;
+            padding-right: 100px;
+        }
+        &:focus {
+            border: 1px solid $primary-bg-color;
+            transition: all 300ms ease-out;
+        }
+    }
+    button {
+        display: inline-block;
+        padding: 11px 35px;
+        border-radius: 50px;
+        outline: none;
+        background-color: $primary-bg-color;
+        color: white;
+        border: none;
+        position: absolute;
+        top: 33px;
+        right: 6px;
+        @media(min-width: 500px) and (max-width: 990px) {
+            padding: 11px 25px;
+            top: 34px;
+        }
+        @media(max-width:500px) {
+            padding: 11px 25px;
+            top: 34px;
+        }
+    }
+}
+
+//THE PAGINATION
+.pagination {
+    width: fit-content;
+    display: block;
+    margin: 80px auto 40px;
+    // border: 1px solid red;
+    background-color: #fff;
+    box-shadow: 3px 3px 13px rgba(204, 204, 204, 0.657);
+    padding: 10px 15px;
+    border-radius: 4px;
+    @media (max-width: 500px) {
+        width: fit-content;
+        padding: 10px 0;
+        margin: 30px auto 30px;
+    }
+    ul {
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline-block;
+            padding: 0 7px;
+            .pagination-control {
+                color: $dark-text-color;
+                padding: 3px 10px;
+                &:hover {
+                    color: $dark-text-color;
+                    background-color: #ccc;
+                    // padding: 3px 10px;
+                    border-radius: 4px;
+                }
+            }
+            .pagination-num {
+                color: $dark-text-color;
+                padding: 3px 10px;
+                &:hover {
+                    color: $dark-text-color;
+                    background-color: #ccc;
+                    border-radius: 4px;
+                }
+                &:active {
+                    color: #fff;
+                    background-color: $primary-bg-color;
+                    padding: 3px 10px;
+                    border-radius: 4px;
+                }
+                &.active {
+                    color: #fff;
+                    background-color: $primary-bg-color;
+                    padding: 3px 10px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
 // ANIMATION FOR THE LOADER 
 @keyframes loader {
     0% {
@@ -123,4 +246,4 @@ a {
 @import "user/alumni";
 @import "user/alumni";
 @import "user/gallery";
-@import "user/book";
+@import "user/sermon";

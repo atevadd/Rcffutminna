@@ -4,56 +4,24 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "nunito", sans-serif;
-}
-
-.alert {
-    width: 40%;
-    padding: 15px;
-    margin: auto;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.alert-success {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #3c763d;
-}
-
-.alert-info {
-    background-color: #d9edf7;
-    border-color: #bce8f1;
-    color: #31708f;
-}
-
-.alert-danger {
-    background-color: #f2dede;
-    border-color: #ebccd1;
-    color: #a94442;
-}
-
-@media screen and (max-width: 480px) {
-    .alert {
-        width: 80%;
-    }
+    font-family: "nunito", sans-serif
 }
 
 body {
-    background-color: #fff;
+    background-color: #fff
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none
 }
 
 a:active {
-    background-color: #1CCACD !important;
+    background-color: #1CCACD !important
 }
 
 .container {
     width: 85%;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .status-bar {
@@ -72,37 +40,37 @@ a:active {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 15px;
+    padding: 15px
 }
 
 .status-bar .nav-icon {
-    display: none;
+    display: none
 }
 
 .status-bar .logo h1 {
     font-size: 1.8rem;
     padding: 0 0 0 15px;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .status-bar .logo h1 a {
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .status-bar .logo h1 a:hover {
-    color: #1CCACD;
+    color: #1CCACD
 }
 
 .status-bar .logout {
-    padding: 0 20px 0 0;
+    padding: 0 20px 0 0
 }
 
 .status-bar .logout a {
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .status-bar .logout a:hover {
-    color: #1CCACD;
+    color: #1CCACD
 }
 
 .side-nav {
@@ -112,39 +80,39 @@ a:active {
     width: 20%;
     overflow-x: hidden;
     background-color: #333335;
-    border-top: 1px solid #aaaaaa;
+    border-top: 1px solid #aaaaaa
 }
 
 .side-nav a.closebtn {
-    display: none;
+    display: none
 }
 
 .side-nav ul {
     list-style: none;
-    margin-top: 30px;
+    margin-top: 30px
 }
 
 .side-nav ul li {
     display: block;
     padding: 25px 0 25px 28px;
-    font-size: 20px;
+    font-size: 20px
 }
 
 .side-nav ul li a {
     color: #f4f4f4;
-    display: block;
+    display: block
 }
 
 .side-nav ul li a i {
-    padding: 0 5px;
+    padding: 0 5px
 }
 
 .side-nav ul li#sidelog {
-    display: none;
+    display: none
 }
 
 .side-nav ul li:hover {
-    background-color: #1CCACD;
+    background-color: #1CCACD
 }
 
 @media screen and (max-width: 768px) {
@@ -153,21 +121,21 @@ a:active {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        z-index: 9999;
+        z-index: 9999
     }
     .status-bar .logo h1 {
-        font-size: 25px;
+        font-size: 25px
     }
     .status-bar .logout {
-        display: none;
+        display: none
     }
     .status-bar .nav-icon {
-        display: block;
+        display: block
     }
     .status-bar .nav-icon span {
         font-size: 30px;
         color: #fff;
-        margin: 0 20px 0 0;
+        margin: 0 20px 0 0
     }
     .side-nav {
         width: 0%;
@@ -176,7 +144,7 @@ a:active {
         opacity: 1;
         overflow-y: scroll;
         -webkit-transition: all 400ms ease-out;
-        transition: all 400ms ease-out;
+        transition: all 400ms ease-out
     }
     .side-nav a.closebtn {
         display: block;
@@ -186,16 +154,16 @@ a:active {
         margin: 0 20px 0 0;
         float: right;
         color: #fff;
-        background: none;
+        background: none
     }
     .side-nav ul {
         clear: both;
         -webkit-transition: all 200ms ease-out;
         transition: all 200ms ease-out;
-        padding-bottom: 40px;
+        padding-bottom: 40px
     }
     .side-nav ul li#sidelog {
-        display: block;
+        display: block
     }
 }
 
@@ -205,23 +173,23 @@ a:active {
     border-radius: 4px;
     position: relative;
     z-index: -1;
-    padding: 15px 0;
+    padding: 15px 0
 }
 
 .wrapper #message {
-    margin: 30px auto;
+    margin: 30px auto
 }
 
 .wrapper .recent-pictures {
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .wrapper .recent-pictures h2 {
     font-size: 30px;
     color: #333;
     padding-bottom: 5px;
-    border-bottom: 1px solid #a1a1a1;
+    border-bottom: 1px solid #a1a1a1
 }
 
 .wrapper .recent-pictures .recent-container {
@@ -238,7 +206,7 @@ a:active {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .wrapper .recent-pictures .recent-container .recent-content {
@@ -248,58 +216,58 @@ a:active {
     position: relative;
     margin-top: 20px;
     padding: 0 20px;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .wrapper .recent-pictures .recent-container .recent-content-img {
     width: 100%;
     height: 75%;
-    border-bottom: 1px solid #8a8a8a;
+    border-bottom: 1px solid #8a8a8a
 }
 
 .wrapper .recent-pictures .recent-container .recent-content-img img {
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .wrapper .recent-pictures .recent-container .recent-content-text {
     position: relative;
     margin: 0 auto;
-    padding: 5px 0;
+    padding: 5px 0
 }
 
 .wrapper .recent-pictures .recent-container .recent-content-text p {
     font-weight: 700;
-    padding: 2px 0;
+    padding: 2px 0
 }
 
 .wrapper .recent-pictures .recent-container .recent-content-text p span {
-    font-weight: 400;
+    font-weight: 400
 }
 
 @media screen and (max-width: 768px) {
     .wrapper {
         width: 100%;
         margin: 0 0;
-        padding: 10px;
+        padding: 10px
     }
     .wrapper h2 {
         font-size: 28px;
         margin: 20px 0 20px;
-        padding: 0 0 3px !important;
+        padding: 0 0 3px !important
     }
     .wrapper .recent-container {
         display: block !important;
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto
     }
     .wrapper .recent-container .recent-content {
         width: 100% !important;
-        display: block;
+        display: block
     }
     .wrapper .recent-container .recent-content-img {
         display: block;
-        height: 100% !important;
+        height: 100% !important
     }
 }
 
@@ -309,23 +277,23 @@ a:active {
     z-index: -1;
     margin: 40px 0 35px 25%;
     border-radius: 4px;
-    padding: 20px 50px;
+    padding: 20px 50px
 }
 
 .message h2 {
     font-size: 2rem;
-    color: #333;
+    color: #333
 }
 
 .message .form {
     width: 50%;
-    position: relative;
+    position: relative
 }
 
 .message .form .input-box {
     position: relative;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0
 }
 
 .message .form .input-box input[type="text"] {
@@ -337,7 +305,7 @@ a:active {
     border: 2px solid #757575;
     padding: 0 0 0 12px;
     -webkit-transition: all 500ms ease-out;
-    transition: all 500ms ease-out;
+    transition: all 500ms ease-out
 }
 
 .message .form .input-box input[type="date"] {
@@ -349,23 +317,23 @@ a:active {
     border: 2px solid #757575;
     padding: 0 0 0 12px;
     -webkit-transition: all 500ms ease-out;
-    transition: all 500ms ease-out;
+    transition: all 500ms ease-out
 }
 
 .message .form .input-box input[type="text"]:focus {
     z-index: -1;
-    border: 2px solid #3c5ceb;
+    border: 2px solid #3c5ceb
 }
 
 .message .form .input-box input[type="text"]:valid {
-    z-index: -1;
+    z-index: -1
 }
 
 .message .form .input-box input[type="text"]:not(:focus)~span,
 .message .form .input-box input[type="text"]:valid~span {
     z-index: 11;
     background-color: white;
-    padding: 0 3px;
+    padding: 0 3px
 }
 
 .message .form .input-box span {
@@ -374,7 +342,7 @@ a:active {
     top: 8px;
     z-index: -1;
     -webkit-transition: all 400ms ease-out;
-    transition: all 400ms ease-out;
+    transition: all 400ms ease-out
 }
 
 .message .form .input-box input[type="text"]:focus~span,
@@ -385,11 +353,11 @@ a:active {
     background-color: white;
     padding: 0 3px;
     left: 8px;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .message .form .input-box input[type="text"]:focus~span {
-    color: #3c5ceb;
+    color: #3c5ceb
 }
 
 .message .form .input-box textarea {
@@ -398,11 +366,11 @@ a:active {
     padding: 8px;
     border-radius: 4px;
     outline: none;
-    border: 2px solid #757575;
+    border: 2px solid #757575
 }
 
 .message .form .input-box label {
-    display: block;
+    display: block
 }
 
 .message .form .input-box select {
@@ -414,7 +382,7 @@ a:active {
     border: 2px solid #757575;
     padding: 0 0 0 12px;
     -webkit-transition: all 500ms ease-out;
-    transition: all 500ms ease-out;
+    transition: all 500ms ease-out
 }
 
 .message .form button {
@@ -425,26 +393,17 @@ a:active {
     border: none;
     color: #333;
     background-color: #1CCACD;
-    font-size: 17px;
-    cursor: pointer;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    color: #333;
-    background-color: #1CCACD;
-    font-size: 17px;
+    font-size: 17px
 }
 
 .message .form button:hover {
     -webkit-box-shadow: 0 3px 13px 0 #b1b1b1;
-    box-shadow: 0 3px 13px 0 #b1b1b1;
+    box-shadow: 0 3px 13px 0 #b1b1b1
 }
 
 .message .all-data {
     width: 100%;
-    margin: 60px 0 0;
+    margin: 60px 0 0
 }
 
 .message .all-data table {
@@ -452,26 +411,26 @@ a:active {
     text-align: left;
     border-collapse: collapse;
     border-radius: 10px;
-    border: 1px solid #757575;
+    border: 1px solid #757575
 }
 
 .message .all-data table th {
     background-color: #1CCACD;
-    color: #333;
+    color: #333
 }
 
 .message .all-data table td,
 .message .all-data table th,
 .message .all-data table tr {
     border: 1px solid #757575;
-    padding: 10px;
+    padding: 10px
 }
 
 .message .all-data table td a.edit {
     padding: 8px 30px;
     border-radius: 4px;
     background-color: #3c5ceb;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .message .all-data table td a.del {
@@ -479,7 +438,7 @@ a:active {
     margin: 0 0 0 5px;
     border-radius: 4px;
     background-color: #eb3c62;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 @media screen and (max-width: 768px) {
@@ -487,40 +446,40 @@ a:active {
         width: 100%;
         margin: 0;
         border: none;
-        padding: 20px 0;
+        padding: 20px 0
     }
     .message h2 {
-        padding: 0 0 0 20px;
+        padding: 0 0 0 20px
     }
     .message .form {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto
     }
     .message .form button {
-        margin: 18px 0 0;
+        margin: 18px 0 0
     }
     .message .all-data {
         width: 90%;
         margin: 60px auto 20px;
-        overflow: auto;
+        overflow: auto
     }
     .message .all-data table {
-        width: 100%;
+        width: 100%
     }
     .message .all-data table tr,
     .message .all-data table td,
     .message .all-data table th {
-        height: 100%;
+        height: 100%
     }
     .message .all-data table td:nth-child(5) {
-        width: auto;
+        width: auto
     }
     .message .all-data table td a.edit {
         padding: 8px 25px;
         border-radius: 4px;
         background-color: #3c5ceb;
         color: #f4f4f4;
-        display: inline-block;
+        display: inline-block
     }
     .message .all-data table td a.del {
         padding: 8px 25px;
@@ -528,7 +487,7 @@ a:active {
         display: inline-block;
         border-radius: 4px;
         background-color: #eb3c62;
-        color: #f4f4f4;
+        color: #f4f4f4
     }
 }
 
@@ -537,22 +496,22 @@ a:active {
     margin: 40px 0 35px 25%;
     border-radius: 4px;
     padding: 20px 50px;
-    border: 1px solid #aaaaaa;
+    border: 1px solid #aaaaaa
 }
 
 .book h2 {
     color: #333;
-    font-size: 2rem;
+    font-size: 2rem
 }
 
 .book #form {
-    width: 50%;
+    width: 50%
 }
 
 .book #form .input-box {
     position: relative;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0
 }
 
 .book #form .input-box input[type="text"] {
@@ -564,22 +523,22 @@ a:active {
     border: 2px solid #757575;
     padding: 0 0 0 12px;
     -webkit-transition: all 500ms ease-out;
-    transition: all 500ms ease-out;
+    transition: all 500ms ease-out
 }
 
 .book #form .input-box input[type="text"]:focus {
     z-index: -1;
-    border: 2px solid #3c5ceb;
+    border: 2px solid #3c5ceb
 }
 
 .book #form .input-box input[type="text"]:valid {
-    z-index: -1;
+    z-index: -1
 }
 
 .book #form .input-box input[type="text"]:not(:focus)~span,
 .book #form .input-box input[type="text"]:valid~span {
     z-index: 11;
-    padding: 0 3px;
+    padding: 0 3px
 }
 
 .book #form .input-box span {
@@ -588,7 +547,7 @@ a:active {
     top: 8px;
     z-index: -1;
     -webkit-transition: all 400ms ease-out;
-    transition: all 400ms ease-out;
+    transition: all 400ms ease-out
 }
 
 .book #form .input-box input[type="text"]:focus~span,
@@ -599,11 +558,11 @@ a:active {
     background-color: white;
     padding: 0 3px;
     left: 8px;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .book #form .input-box input[type="text"]:focus~span {
-    color: #3c5ceb;
+    color: #3c5ceb
 }
 
 .book #form .input-box textarea {
@@ -612,12 +571,12 @@ a:active {
     padding: 8px;
     border-radius: 4px;
     outline: none;
-    border: 2px solid #757575;
+    border: 2px solid #757575
 }
 
 .book #form .input-box label {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .book #form button {
@@ -631,29 +590,17 @@ a:active {
     background-color: #1CCACD;
     font-size: 17px;
     -webkit-transition: all 100ms ease-out;
-    transition: all 100ms ease-out;
-    cursor: pointer;
-    margin: 15px 0 0;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    color: #333;
-    background-color: #1CCACD;
-    font-size: 17px;
-    -webkit-transition: all 100ms ease-out;
-    transition: all 100ms ease-out;
+    transition: all 100ms ease-out
 }
 
 .book #form button:hover {
     -webkit-box-shadow: 0 3px 13px 0 #b1b1b1;
-    box-shadow: 0 3px 13px 0 #b1b1b1;
+    box-shadow: 0 3px 13px 0 #b1b1b1
 }
 
 .book .all-data {
     width: 100%;
-    margin: 60px 0 0;
+    margin: 60px 0 0
 }
 
 .book .all-data table {
@@ -661,26 +608,26 @@ a:active {
     text-align: left;
     border-collapse: collapse;
     border-radius: 10px;
-    border: 1px solid #757575;
+    border: 1px solid #757575
 }
 
 .book .all-data table th {
     background-color: #1CCACD;
-    color: #333;
+    color: #333
 }
 
 .book .all-data table td,
 .book .all-data table th,
 .book .all-data table tr {
     border: 1px solid #757575;
-    padding: 10px;
+    padding: 10px
 }
 
 .book .all-data table td a.edit {
     padding: 8px 30px;
     border-radius: 4px;
     background-color: #3c5ceb;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .book .all-data table td a.del {
@@ -688,11 +635,11 @@ a:active {
     margin: 0 0 0 5px;
     border-radius: 4px;
     background-color: #eb3c62;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .book .all-data table td a#file:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 @media screen and (max-width: 768px) {
@@ -700,37 +647,37 @@ a:active {
         width: 100%;
         margin: 0;
         padding: 20px 0;
-        border: none;
+        border: none
     }
     .book h2 {
-        padding: 10px 0 5px 20px;
+        padding: 10px 0 5px 20px
     }
     .book #form {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto
     }
     .book .all-data {
         width: 90%;
         margin: 60px auto 20px;
-        overflow: auto;
+        overflow: auto
     }
     .book .all-data table {
-        width: 100%;
+        width: 100%
     }
     .book .all-data table tr,
     .book .all-data table td,
     .book .all-data table th {
-        height: 100%;
+        height: 100%
     }
     .book .all-data table td:nth-child(5) {
-        width: auto;
+        width: auto
     }
     .book .all-data table td a.edit {
         padding: 8px 25px;
         border-radius: 4px;
         background-color: #3c5ceb;
         color: #f4f4f4;
-        display: inline-block;
+        display: inline-block
     }
     .book .all-data table td a.del {
         padding: 8px 25px;
@@ -738,7 +685,7 @@ a:active {
         display: inline-block;
         border-radius: 4px;
         background-color: #eb3c62;
-        color: #f4f4f4;
+        color: #f4f4f4
     }
 }
 
@@ -747,29 +694,29 @@ a:active {
     margin: 40px 0 35px 25%;
     border: 1px solid #aaaaaa;
     border-radius: 4px;
-    padding: 20px 50px;
+    padding: 20px 50px
 }
 
 .gallery h2 {
     font-size: 2rem;
-    color: #333;
+    color: #333
 }
 
 .gallery .form {
     margin: 15px 0 0;
-    width: 40%;
+    width: 40%
 }
 
 .gallery .form .input-box {
     position: relative;
     width: 100%;
-    margin: 10px 0 5px;
+    margin: 10px 0 5px
 }
 
 .gallery .form .input-box label {
     display: block;
     padding: 5px 0 0;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .gallery .form .input-box input[type="text"],
@@ -778,7 +725,7 @@ a:active {
     width: 100%;
     height: 40px;
     border: 2px solid #9c9c9c;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
 .gallery .form button {
@@ -790,27 +737,17 @@ a:active {
     background-color: #1CCACD;
     color: #333;
     font-size: 18px;
-    border-radius: 3px;
-    cursor: pointer;
-    width: 100%;
-    padding: 10px 0;
-    margin: 15px 0;
-    outline: none;
-    border: none;
-    background-color: #1CCACD;
-    color: #333;
-    font-size: 18px;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
 .gallery .form button:hover {
     -webkit-box-shadow: 0 3px 13px 0 #b1b1b1;
-    box-shadow: 0 3px 13px 0 #b1b1b1;
+    box-shadow: 0 3px 13px 0 #b1b1b1
 }
 
 .gallery .all-data {
     width: 100%;
-    margin: 60px 0 0;
+    margin: 60px 0 0
 }
 
 .gallery .all-data table {
@@ -818,26 +755,26 @@ a:active {
     text-align: left;
     border-collapse: collapse;
     border-radius: 10px;
-    border: 1px solid #757575;
+    border: 1px solid #757575
 }
 
 .gallery .all-data table th {
     background-color: #1CCACD;
-    color: #333;
+    color: #333
 }
 
 .gallery .all-data table td,
 .gallery .all-data table th,
 .gallery .all-data table tr {
     border: 1px solid #757575;
-    padding: 10px;
+    padding: 10px
 }
 
 .gallery .all-data table td a.edit {
     padding: 8px 30px;
     border-radius: 4px;
     background-color: #3c5ceb;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .gallery .all-data table td a.del {
@@ -845,7 +782,7 @@ a:active {
     margin: 0 0 0 5px;
     border-radius: 4px;
     background-color: #eb3c62;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 @media screen and (max-width: 768px) {
@@ -853,34 +790,34 @@ a:active {
         width: 100%;
         border: none;
         margin: 0;
-        padding: 20px 0;
+        padding: 20px 0
     }
     .gallery h2 {
-        padding: 0 20px;
+        padding: 0 20px
     }
     .gallery .form {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto
     }
     .gallery .all-data {
         width: 90%;
         margin: 60px auto 20px;
-        overflow: auto;
+        overflow: auto
     }
     .gallery .all-data table {
-        width: 100%;
+        width: 100%
     }
     .gallery .all-data table tr,
     .gallery .all-data table td,
     .gallery .all-data table th {
-        height: 100%;
+        height: 100%
     }
     .gallery .all-data table td a.edit {
         padding: 8px 25px;
         border-radius: 4px;
         background-color: #3c5ceb;
         color: #f4f4f4;
-        display: inline-block;
+        display: inline-block
     }
     .gallery .all-data table td a.del {
         padding: 8px 25px;
@@ -888,7 +825,7 @@ a:active {
         display: inline-block;
         border-radius: 4px;
         background-color: #eb3c62;
-        color: #f4f4f4;
+        color: #f4f4f4
     }
 }
 
@@ -897,28 +834,28 @@ a:active {
     margin: 40px 0 35px 25%;
     border: 1px solid #aaaaaa;
     border-radius: 4px;
-    padding: 20px 50px;
+    padding: 20px 50px
 }
 
 .announcement h2 {
     font-size: 2rem;
     color: #333;
-    margin: 0 0 5px;
+    margin: 0 0 5px
 }
 
 .announcement .form {
-    width: 40%;
+    width: 40%
 }
 
 .announcement .form .input-box {
     width: 100%;
     margin: 0 0 15px;
-    position: relative;
+    position: relative
 }
 
 .announcement .form .input-box label {
     display: inline-block;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .announcement .form .input-box input,
@@ -928,17 +865,17 @@ a:active {
     height: 35px;
     border: 2px solid #9c9c9c;
     border-radius: 3px;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 10px
 }
 
 .announcement .form .input-box input:focus,
 .announcement .form .input-box select:focus {
-    border: 2px solid #3c5ceb;
+    border: 2px solid #3c5ceb
 }
 
 .announcement .form .input-box input[type="file"] {
     border: none;
-    padding: 0;
+    padding: 0
 }
 
 .announcement .form .input-box span {
@@ -946,7 +883,7 @@ a:active {
     left: 15px;
     top: 7px;
     -webkit-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
+    transition: all 300ms ease-out
 }
 
 .announcement .form .input-box input:focus~span,
@@ -955,7 +892,7 @@ a:active {
     transform: translateY(-16px);
     padding: 0 3px;
     background-color: #fff;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .announcement .form .input-box textarea {
@@ -963,7 +900,7 @@ a:active {
     border-radius: 3px;
     border: 2px solid #9c9c9c;
     padding: 10px;
-    resize: none;
+    resize: none
 }
 
 .announcement .form button {
@@ -975,27 +912,17 @@ a:active {
     background-color: #1CCACD;
     font-size: 18px;
     margin: 12px 0 0;
-    border-radius: 3px;
-    cursor: pointer;
-    width: 100%;
-    padding: 10px 0;
-    outline: none;
-    border: none;
-    color: #333;
-    background-color: #1CCACD;
-    font-size: 18px;
-    margin: 12px 0 0;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
 .announcement .form button:hover {
     -webkit-box-shadow: 0 3px 13px 0 #b1b1b1;
-    box-shadow: 0 3px 13px 0 #b1b1b1;
+    box-shadow: 0 3px 13px 0 #b1b1b1
 }
 
 .announcement .all-data {
     width: 100%;
-    margin: 60px 0 0;
+    margin: 60px 0 0
 }
 
 .announcement .all-data table {
@@ -1003,12 +930,12 @@ a:active {
     text-align: left;
     border-collapse: collapse;
     border-radius: 10px;
-    border: 1px solid #757575;
+    border: 1px solid #757575
 }
 
 .announcement .all-data table th {
     background-color: #1CCACD;
-    color: #333;
+    color: #333
 }
 
 .announcement .all-data table td,
@@ -1019,11 +946,11 @@ a:active {
     width: auto;
     height: -webkit-max-content;
     height: -moz-max-content;
-    height: max-content;
+    height: max-content
 }
 
 .announcement .all-data table td:nth-child(3) {
-    width: auto;
+    width: auto
 }
 
 .announcement .all-data table td a.edit {
@@ -1031,7 +958,7 @@ a:active {
     border-radius: 4px;
     background-color: #3c5ceb;
     color: #f4f4f4;
-    display: inline-block;
+    display: inline-block
 }
 
 .announcement .all-data table td a.del {
@@ -1040,7 +967,7 @@ a:active {
     display: inline-block;
     border-radius: 4px;
     background-color: #eb3c62;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 @media screen and (max-width: 768px) {
@@ -1048,34 +975,34 @@ a:active {
         width: 100%;
         margin: 0 auto;
         border: none;
-        padding: 20px 0;
+        padding: 20px 0
     }
     .announcement h2 {
-        padding: 0 0 0 20px;
+        padding: 0 0 0 20px
     }
     .announcement .form {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto
     }
     .announcement .all-data {
         width: 90%;
         margin: 60px auto 20px;
-        overflow: auto;
+        overflow: auto
     }
     .announcement .all-data table {
-        width: 100%;
+        width: 100%
     }
     .announcement .all-data table tr,
     .announcement .all-data table td,
     .announcement .all-data table th {
-        height: 100%;
+        height: 100%
     }
     .announcement .all-data table td a.edit {
         padding: 8px 25px;
         border-radius: 4px;
         background-color: #3c5ceb;
         color: #f4f4f4;
-        display: inline-block;
+        display: inline-block
     }
     .announcement .all-data table td a.del {
         padding: 8px 25px;
@@ -1083,7 +1010,7 @@ a:active {
         display: inline-block;
         border-radius: 4px;
         background-color: #eb3c62;
-        color: #f4f4f4;
+        color: #f4f4f4
     }
 }
 
@@ -1092,29 +1019,29 @@ a:active {
     margin: 40px 0 35px 25%;
     border: 1px solid #aaaaaa;
     padding: 20px 50px;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .testimony h2 {
     font-size: 2rem;
     padding: 0 0 20px;
-    color: #333;
+    color: #333
 }
 
 .testimony .form {
-    width: 40%;
+    width: 40%
 }
 
 .testimony .form .input-box {
     width: 100%;
     position: relative;
-    margin: 0 0 8px;
+    margin: 0 0 8px
 }
 
 .testimony .form .input-box label {
     font-weight: 600;
     display: block;
-    padding: 5px 0 0;
+    padding: 5px 0 0
 }
 
 .testimony .form .input-box input {
@@ -1122,7 +1049,7 @@ a:active {
     height: 35px;
     border-radius: 3px;
     border: 2px solid #797979;
-    padding: 0 10px;
+    padding: 0 10px
 }
 
 .testimony .form .input-box textarea {
@@ -1130,7 +1057,7 @@ a:active {
     resize: none;
     border: 2px solid #797979;
     padding: 8px;
-    border-radius: 3px;
+    border-radius: 3px
 }
 
 .testimony .form button {
@@ -1142,22 +1069,12 @@ a:active {
     margin: 15px 0 0;
     outline: none;
     border: none;
-    font-size: 18px;
-    cursor: pointer;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 3px;
-    color: #333;
-    background-color: #1CCACD;
-    margin: 15px 0 0;
-    outline: none;
-    border: none;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .testimony .all-data {
     width: 100%;
-    margin: 60px 0 0;
+    margin: 60px 0 0
 }
 
 .testimony .all-data table {
@@ -1165,26 +1082,26 @@ a:active {
     text-align: left;
     border-collapse: collapse;
     border-radius: 10px;
-    border: 1px solid #757575;
+    border: 1px solid #757575
 }
 
 .testimony .all-data table th {
     background-color: #1CCACD;
-    color: #333;
+    color: #333
 }
 
 .testimony .all-data table td,
 .testimony .all-data table th,
 .testimony .all-data table tr {
     border: 1px solid #757575;
-    padding: 10px;
+    padding: 10px
 }
 
 .testimony .all-data table td a.edit {
     padding: 8px 30px;
     border-radius: 4px;
     background-color: #3c5ceb;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 .testimony .all-data table td a.del {
@@ -1192,7 +1109,7 @@ a:active {
     margin: 0 0 0 5px;
     border-radius: 4px;
     background-color: #eb3c62;
-    color: #f4f4f4;
+    color: #f4f4f4
 }
 
 @media screen and (max-width: 768px) {
@@ -1200,34 +1117,34 @@ a:active {
         width: 100%;
         border: none;
         margin: 0;
-        padding: 20px 0;
+        padding: 20px 0
     }
     .testimony h2 {
-        padding: 0 0 0 20px;
+        padding: 0 0 0 20px
     }
     .testimony .form {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto
     }
     .testimony .all-data {
         width: 90%;
         margin: 60px auto 20px;
-        overflow: auto;
+        overflow: auto
     }
     .testimony .all-data table {
-        width: 100%;
+        width: 100%
     }
     .testimony .all-data table tr,
     .testimony .all-data table td,
     .testimony .all-data table th {
-        height: 100%;
+        height: 100%
     }
     .testimony .all-data table td a.edit {
         padding: 8px 25px;
         border-radius: 4px;
         background-color: #3c5ceb;
         color: #f4f4f4;
-        display: inline-block;
+        display: inline-block
     }
     .testimony .all-data table td a.del {
         padding: 8px 25px;
@@ -1235,7 +1152,7 @@ a:active {
         display: inline-block;
         border-radius: 4px;
         background-color: #eb3c62;
-        color: #f4f4f4;
+        color: #f4f4f4
     }
 }
 
@@ -1247,13 +1164,13 @@ a:active {
     border: 1px solid #ccc;
     -webkit-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    padding: 20px 40px;
+    padding: 20px 40px
 }
 
 @media (max-width: 990px) {
     .login-form {
         width: 90%;
-        padding: 20px 20px;
+        padding: 20px 20px
     }
 }
 
@@ -1262,20 +1179,20 @@ a:active {
     font-size: 2.1rem;
     text-align: center;
     margin: 0 0 40px 0;
-    font-weight: 500;
+    font-weight: 500
 }
 
 @media (max-width: 990px) {
     .login-form h2 {
         font-size: 1.7rem;
-        margin-top: 20px;
+        margin-top: 20px
     }
 }
 
 .login-form .input-box {
     width: 100%;
     position: relative;
-    margin: 30px 0 0 0;
+    margin: 30px 0 0 0
 }
 
 .login-form .input-box input {
@@ -1287,7 +1204,7 @@ a:active {
     border-bottom: 2px solid #ccc;
     -webkit-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    z-index: 99;
+    z-index: 99
 }
 
 .login-form .input-box label {
@@ -1297,22 +1214,22 @@ a:active {
     left: 0;
     -webkit-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    color: #666666;
-    z-index: -1;
+    color: #666;
+    z-index: -1
 }
 
 .login-form .input-box input:focus~label {
-    color: #002cfa;
+    color: #002cfa
 }
 
 .login-form .input-box input:focus {
-    border-bottom: 2px solid #002cfa;
+    border-bottom: 2px solid #002cfa
 }
 
 .login-form .input-box input:focus~label,
 .login-form .input-box input:valid~label {
     top: -11px;
-    font-size: 13px;
+    font-size: 13px
 }
 
 .login-form button {
@@ -1325,5 +1242,5 @@ a:active {
     border: none;
     background-color: #002cfa;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 4px
 }

@@ -206,6 +206,8 @@
     <!-- ENDS HERE ============== -->
 
 
+     <!-- BACK TO TOP BUTTON -->
+     <a href="#" class="backtotop" id="totop"><i class="fa fa-angle-up"></i></a>
 
 
 
@@ -230,6 +232,33 @@
     var date = new Date();
 
     footerDate.innerHTML = date.getFullYear();
+
+    var totop = document.getElementById("totop"); //back to top button
+
+        
+
+        window.onscroll = function(){
+            toTop();
+        };
+
+        // the function that shows the back to top button on scroll
+        function toTop(){
+            if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
+                totop.style.display = "flex";
+            }else{
+                totop.style.display = "none";
+            }
+        }
+
+        //the function that move the page to the top when the back to top button is click
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        //the event listener that moves the page to the top
+        totop.addEventListener("click", topFunction);
+        
   </script>
 </body>
 
