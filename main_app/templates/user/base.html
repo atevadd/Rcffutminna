@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rcffutminna - The official website of Redeemed Christian fellowship Futminna chapter</title>
+    <title>Rcffutminna - {{title}}</title>
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,6 +15,39 @@
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/user.css')}}">
+        <style>
+.alert {
+    width: 40%;
+    padding: 15px;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+@media screen and (max-width: 480px) {
+    .alert {
+        width: 80%;
+    }
+}
+    </style>
 </head>
 
 <body>
@@ -28,7 +61,7 @@
     <!-- THE TOP NAVIGATION -->
     <nav class="nav">
         <div class="container">
-            <a href="#" class="brand-logo">Rcffutminna</a>
+            <a href="{{url_for('index')}}" class="brand-logo">Rcffutminna</a>
 
             <span class="toggler" id="toggler">
                 <i class="fa fa-bars"></i>
@@ -37,15 +70,24 @@
             <ul class="nav-links" id="links">
                 <li><a href="{{url_for('index')}}">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Sermons</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="#">Books</a></li>
+                <li><a href="{{url_for('sermons')}}">Sermons</a></li>
+                <li><a href="{{url_for('events')}}">Events</a></li>
+                <li><a href="{{url_for('user_books')}}">Books</a></li>
                 <li><a href="{{url_for('view_gallery')}}">Gallery</a></li>
-                <li><a href="#">Alumni</a></li>
+                <li><a href="{{url_for('alumni')}}">Alumni</a></li>
             </ul>
         </div>
     </nav>
     <!-- ENDS HERE  -->
+    {%with messages = get_flashed_messages(with_categories=True)%} 
+    {%if messages%} 
+        {%for category, message in messages%}
+            <div class="alert alert-{{category}}" style="text-align: center;">
+                {{message}}
+            </div>
+        {%endfor%} 
+    {%endif%} 
+{%endwith%} 
     {% block contents %}
     <!-- add stuffs here -->
     {% endblock contents %}

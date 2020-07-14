@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import "user/variables";
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,15 +10,15 @@
     scroll-behavior: smooth;
 }
 
-body {
+body{
     background-color: $bg-color;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
-.pre-loader {
+.pre-loader{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -25,13 +27,16 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    .loader {
+
+
+    .loader{
         width: 500px;
         height: 500px;
         animation-name: loader;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
-        img {
+        
+        img{
             width: 100%;
             height: 100%;
         }
@@ -39,6 +44,7 @@ a {
 }
 
 // BACK TO TOP BUTTON
+
 .backtotop {
     position: fixed;
     bottom: 20px;
@@ -60,56 +66,63 @@ a {
     animation-name: topper;
     animation-duration: 1s;
     animation-iteration-count: 1;
-    @media (max-width: 414px) {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        border-radius: 50px;
-        background-color: rgba(51, 51, 51, 0.47);
-        color: #fff;
-        font-size: 16px;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        transition: all 400ms ease-out;
-        z-index: 999;
-        cursor: pointer;
+  
+    @media (max-width:414px) {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 50px;
+      background-color: rgba(51, 51, 51, 0.47);
+      color: #fff;
+      font-size: 16px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: all 400ms ease-out;
+      z-index: 999;
+      cursor: pointer;
     }
+  
     &:hover {
-        background-color: $primary-bg-color;
-        color: white;
+      background-color: $primary-bg-color;
+      color: white;
     }
+  
     i {
-        @media (max-width: 414px) {
-            font-size: 20px;
-        }
+      @media (max-width: 414px) {
+        font-size: 20px;
+      }
     }
-}
+  }
 
-//THE SEARCH BAR DESIGN
-.search-box {
+
+  //THE SEARCH BAR DESIGN
+  .search-box{
     position: relative;
     display: block;
     width: 40%;
     margin: 40px auto 40px;
-    @media(min-width: 500px) and (max-width: 990px) {
-        width: 75%;
-        margin: 50px auto 30px;
+
+    @media(min-width:500px) and (max-width:990px){
+      width: 75%;
+      margin: 50px auto 30px;
     }
-    @media(max-width:500px) {
-        width: 100%;
-        margin: 50px auto 30px;
+    @media(max-width:500px){
+      width: 100%;
+      margin: 50px auto 30px;
     }
-    label {
-        display: block;
-        font-size: 18px;
-        padding: 0 0 0 10px;
-        font-weight: 500;
+
+    label{
+      display: block;
+      font-size: 18px;
+      padding: 0 0 0 10px;
+      font-weight: 500;
     }
-    input {
+
+    input{
         width: 100%;
         display: block;
         height: 55px;
@@ -120,20 +133,25 @@ a {
         padding-right: 138px;
         font-size: 14px;
         color: $dark-text-color;
-        @media(min-width: 500px) and (max-width: 990px) {
-            font-size: 14px;
-            padding-right: 138px;
+
+        @media(min-width:500px) and (max-width:990px){
+          font-size: 14px;
+        padding-right: 138px;
+
         }
-        @media(max-width:500px) {
-            font-size: 13px;
-            padding-right: 100px;
+        @media(max-width:500px){
+          font-size: 13px;
+          padding-right: 100px;
+
         }
-        &:focus {
+
+        &:focus{
             border: 1px solid $primary-bg-color;
             transition: all 300ms ease-out;
         }
     }
-    button {
+
+    button{
         display: inline-block;
         padding: 11px 35px;
         border-radius: 50px;
@@ -142,18 +160,22 @@ a {
         color: white;
         border: none;
         position: absolute;
-        top: 33px;
+        top:33px;
         right: 6px;
-        @media(min-width: 500px) and (max-width: 990px) {
-            padding: 11px 25px;
-            top: 34px;
+
+        @media(min-width:500px) and (max-width:990px){
+          padding: 11px 25px;
+        top:34px;
+
         }
-        @media(max-width:500px) {
-            padding: 11px 25px;
-            top: 34px;
+        @media(max-width:500px){
+          padding: 11px 25px;
+        top:34px;
+
         }
     }
 }
+
 
 //THE PAGINATION
 .pagination {
@@ -165,65 +187,75 @@ a {
     box-shadow: 3px 3px 13px rgba(204, 204, 204, 0.657);
     padding: 10px 15px;
     border-radius: 4px;
+
     @media (max-width: 500px) {
-        width: fit-content;
-        padding: 10px 0;
-        margin: 30px auto 30px;
+      width: fit-content;
+      padding: 10px 0;
+      margin: 30px auto 30px;
     }
+
     ul {
+      display: inline-block;
+      list-style: none;
+      text-align: center;
+
+      li {
         display: inline-block;
-        list-style: none;
-        text-align: center;
-        li {
-            display: inline-block;
-            padding: 0 7px;
-            .pagination-control {
-                color: $dark-text-color;
-                padding: 3px 10px;
-                &:hover {
-                    color: $dark-text-color;
-                    background-color: #ccc;
-                    // padding: 3px 10px;
-                    border-radius: 4px;
-                }
-            }
-            .pagination-num {
-                color: $dark-text-color;
-                padding: 3px 10px;
-                &:hover {
-                    color: $dark-text-color;
-                    background-color: #ccc;
-                    border-radius: 4px;
-                }
-                &:active {
-                    color: #fff;
-                    background-color: $primary-bg-color;
-                    padding: 3px 10px;
-                    border-radius: 4px;
-                }
-                &.active {
-                    color: #fff;
-                    background-color: $primary-bg-color;
-                    padding: 3px 10px;
-                    border-radius: 4px;
-                }
-            }
+        padding: 0 7px;
+
+        .pagination-control {
+          color: $dark-text-color;
+          padding: 3px 10px;
+
+          &:hover {
+            color: $dark-text-color;
+            background-color: #ccc;
+            // padding: 3px 10px;
+            border-radius: 4px;
+          }
         }
+
+        .pagination-num {
+          color: $dark-text-color;
+          padding: 3px 10px;
+
+          &:hover {
+            color: $dark-text-color;
+            background-color: #ccc;
+            border-radius: 4px;
+          }
+
+          &:active {
+            color: #fff;
+            background-color: $primary-bg-color;
+            padding: 3px 10px;
+            border-radius: 4px;
+          }
+
+          &.active {
+            color: #fff;
+            background-color: $primary-bg-color;
+            padding: 3px 10px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+
+// ANIMATION FOR THE LOADER 
+@keyframes loader{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
     }
 }
 
-// ANIMATION FOR THE LOADER 
-@keyframes loader {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.3);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 
 // @keyframes topper{
 //     0%{
@@ -238,12 +270,14 @@ a {
 //         bottom: 50px;
 //         opacity: 1;
 //     }
+
 // }
 @import "user/nav";
 @import "user/index";
 @import "user/footer";
 @import "user/event";
 @import "user/alumni";
-@import "user/alumni";
 @import "user/gallery";
+@import "user/book";
 @import "user/sermon";
+

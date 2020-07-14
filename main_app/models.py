@@ -139,7 +139,7 @@ class Alumni(db.Model):
     last_name = db.Column(db.String(50))
     email = db.Column(db.String(50), unique=True)
     phone_number = db.Column(db.String(20))
-    unit = db.Column(db.String(20))
+    unit = db.Column(db.String(20), default=None)
     role = db.Column(db.String(50))
     
     def __str__(self):
