@@ -1,0 +1,31 @@
+{% extends 'admin/base.html' %}
+{% block content%}
+    <!-- THE GALLERY FORM -->
+    <div class="gallery">
+        <h2>Edit picture</h2>
+        <form action="" method="POST" enctype="multipart/form-data" class="form">
+            <div class="input-box">
+                <label for="image file">Image file here</label>
+                <input type="file" name="image" multiple>
+            </div>
+            <div class="input-box">
+                <label for="">Tag</label>
+                <select name="tag" required>
+                    <option value="{{gallery.tag}}">{{gallery.tag}}</option>
+                    <option value="Sunday service">Sunday service</option>
+                    <option value="Thanksgiving service">Thanksgiving service</option>
+                    <option value="Thanksgiving service">FYB Sunday</option>
+                    <option value="Thanksgiving service">Freshers week </option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="image file">Date</label>
+                <input type="date" name="date">
+            </div>
+            <button type="submit">Edit</button>
+        </form>
+
+        <!-- THE LIST OF ALL THE BOOKS-->
+        <div class="all-data">
+    </div>
+{% endblock %}

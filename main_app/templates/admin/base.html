@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the admin dashboard - RCFfutminna</title>
+    <title>Welcome to the admin dashboard - {{title}}</title>
 
     <!-- FONT AWESOME CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,10 +16,10 @@
     <!-- STATUS BAR -->
     <div class="status-bar">
         <div class="logo">
-            <h1><a href="{{url_for('index')}}">Admin Dashboard</a></h1>
+            <h1><a href="{{url_for('admin_index')}}">Admin Dashboard</a></h1>
         </div>
         <div class="logout" id="toplog">
-            <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            <a href="{{url_for('logout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </div>
         <div class="nav-icon" id="menu">
             <span><i class="fa fa-bars"></i></span>
@@ -31,7 +31,7 @@
         <a href="#" class="closebtn" id="sidenav"><i class="fa fa-times"></i></a>
         <ul>
             <li>
-                <a href="{{url_for('index')}}"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a
+                <a href="{{url_for('admin_index')}}"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a
                 >
             </li>
             <li>
@@ -60,7 +60,7 @@
                 >
             </li>
             <li id="sidelog">
-                <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+                <a href="{{url_for('logout')}}"><i class="fa fa-sign-out"></i> Logout</a>
             </li>
         </ul>
     </div>

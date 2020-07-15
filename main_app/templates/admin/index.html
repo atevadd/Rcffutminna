@@ -5,71 +5,42 @@
         <div class="recent-pictures">
             <h2>Recent Pictures</h2>
             <div class="recent-container">
+            {% if galleries %}
+                {% for gallery in galleries %}
                 <div class="recent-content">
                     <div class="recent-content-img">
-                        <img src="{{url_for('static', filename='img/person.png')}}" alt="">
+                        <img src="{{url_for('static', filename='church_img/'+gallery.image)}}" alt="">
                     </div>
                     <div class="recent-content-text">
-                        <p>Tag: <span>Sunday service</span></p>
-                        <p>Date: <span>20th,june 2020</span></p>
+                        <p>Tag: <span>{{gallery.tag}}</span></p>
+                        <p>Date: <span>{{gallery.date.strftime('%d,%A %Y')}}</span></p>
                     </div>
                 </div>
-                <div class="recent-content">
-                    <div class="recent-content-img">
-                        <img src="{{url_for('static', filename='img/person.png')}}" alt="">
-                    </div>
-                    <div class="recent-content-text">
-                        <p>Tag: <span>Sunday service</span></p>
-                        <p>Date: <span>20th,june 2020</span></p>
-                    </div>
-                </div>
-                <div class="recent-content">
-                    <div class="recent-content-img">
-                        <img src="{{url_for('static', filename='img/person.png')}}" alt="">
-                    </div>
-                    <div class="recent-content-text">
-                        <p>Tag: <span>Sunday service</span></p>
-                        <p>Date: <span>20th,june 2020</span></p>
-                    </div>
-                </div>
-            </div>
+                {% endfor %}
+            {% else %}
+                <h1 style="text-align:center;margin-top:30px;font-weight:100;">No Pictures Yet</h1>
+            {% endif %}
         </div>
         <div class="recent-pictures" id="message">
             <h2>Recent Messages</h2>
             <div class="recent-container">
+            {% if messages%}
+                {% for message in messages%}
                 <div class="recent-content">
                     <div class="recent-content-img">
                         <img src="{{url_for('static', filename='img/person.png')}}" alt="">
                     </div>
                     <div class="recent-content-text">
-                        <p>Author: <span>Bro Sunday</span></p>
-                        <p>Title: <span>Anointing upon</span></p>
-                        <p>Date: <span>20-03-2020</span></p>
-                        <p>Title: <span>Anointing upon</span></p>
+                        <p>Author: <span>{{message.minister}}</span></p>
+                        <p>Title: <span>{{message.title}}</span></p>
+                        <p>Date: <span>{{message.date.strftime('%d-%m-%Y')}}</span></p>
+                        <p>Program: <span>{{message.tag}}</span></p></p>
                     </div>
                 </div>
-                <div class="recent-content">
-                    <div class="recent-content-img">
-                        <img src="{{url_for('static', filename='img/person.png')}}" alt="">
-                    </div>
-                    <div class="recent-content-text">
-                        <p>Author: <span>Bro Sunday</span></p>
-                        <p>Title: <span>Anointing upon</span></p>
-                        <p>Date: <span>20-03-2020</span></p>
-                        <p>Title: <span>Anointing upon</span></p>
-                    </div>
-                </div>
-                <div class="recent-content">
-                    <div class="recent-content-img">
-                        <img src="{{url_for('static', filename='img/person.png')}}" alt="">
-                    </div>
-                    <div class="recent-content-text">
-                        <p>Author: <span>Bro Sunday</span></p>
-                        <p>Title: <span>Anointing upon</span></p>
-                        <p>Date: <span>20-03-2020</span></p>
-                        <p>Title: <span>Anointing upon</span></p>
-                    </div>
-                </div>
+                {% endfor %}
+            {% else %}
+                <h1 style="text-align:center;margin-top:30px;font-weight:100;">No Messages Yet</h1>
+            {% endif %}
             </div>
         </div>
     </div>

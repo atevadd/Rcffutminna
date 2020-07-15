@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,11 +44,15 @@
     </div>
   </nav>
   <!-- ENDS HERE  -->
+=======
+{% extends 'user/base.html' %} 
+{% block contents %}
+>>>>>>> 4c18da2be11479a0dc1fcd25fe685d7e7efea849
 
   <section id="header">
     <div class="event-header">
       <h1>Events</h1>
-      <p class="breadcrumb"><a href="index.html">Home</a> / Events</p>
+      <p class="breadcrumb"><a href="{{url_for('index')}}">Home</a> / Events</p>
     </div>
   </section>
 
@@ -132,6 +137,7 @@
       <h2>You are the only Bible some unbelievers will ever read.</h2>
       <cite>john macarthur</cite>
     </div>
+<<<<<<< HEAD
 
 
   <!-- THE FOOTER SECTION STARTS HERE ============-->
@@ -263,3 +269,6 @@
 </body>
 
 </html>
+=======
+{% endblock contents %}
+>>>>>>> 4c18da2be11479a0dc1fcd25fe685d7e7efea849

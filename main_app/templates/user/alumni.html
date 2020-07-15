@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,6 +44,10 @@
   </nav>
   <!-- ENDS HERE  -->
 
+=======
+{% extends 'user/base.html' %} 
+{% block contents %}
+>>>>>>> 4c18da2be11479a0dc1fcd25fe685d7e7efea849
   <section id="header">
     <div class="event-header">
       <h1>Alumni</h1>
@@ -60,15 +65,15 @@
   </section>
 
   <section class="alumni-form">
-    <form action="" class="form">
+    <form action="" method="POST" class="form">
       <div class="input-box name">
         <div class="input-group">
           <label for="Fname">First Name</label>
-          <input type="text" id="alumni-fname" required />
+          <input type="text" name="firstName" id="alumni-fname" required />
         </div>
         <div class="input-group">
           <label for="lname">Last Name</label>
-          <input type="text" id="alumni-lname" inputmode="latin-name" required />
+          <input type="text" name="lastName" id="alumni-lname" inputmode="latin-name" required />
         </div>
       </div>
       <div class="input-box">
@@ -103,6 +108,7 @@
     <h2>You are the only Bible some unbelievers will ever read.</h2>
     <cite>john macarthur</cite>
   </div>
+<<<<<<< HEAD
 
   <!-- THE FOOTER SECTION STARTS HERE ============-->
   <footer class="footer">
@@ -227,3 +233,6 @@
 </body>
 
 </html>
+=======
+{% endblock contents%}
+>>>>>>> 4c18da2be11479a0dc1fcd25fe685d7e7efea849

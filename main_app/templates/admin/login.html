@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Login</title>
-    <link rel="stylesheet" href="../../static/css/admin.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/admin.css')}}">
+</head>
+
+<body>
+<!-- flash messages-->
+{%with messages = get_flashed_messages(with_categories=True)%} 
+    {%if messages%} 
+        {%for category, message in messages%}
+            <div class="alert alert-{{category}}" style="text-align: center;">
+                {{message}}
+            </div>
+        {%endfor%} 
+    {%endif%} 
+{%endwith%} 
     <div class="login-form">
         <h2>Admin login</h2>
-      <form action="" class="form">
-        <div class="input-box">
-          <input type="text" name="username" required/>
-          <label for="">Username</label>
-        </div>
-        <div class="input-box">
-          <input type="password" name="password" required/>
-          <label for="">Password</label>
-        </div>
-        <button type="submit">Login</button>
-      </form>
+        <form action="" method="POST" class="form">
+            <div class="input-box">
+                <input type="text" name="username" required/>
+                <label for="">Username</label>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" required/>
+                <label for="">Password</label>
+            </div>
+            <button type="submit">Login</button>
+        </form>
     </div>
-  </body>
+</body>
+
 </html>

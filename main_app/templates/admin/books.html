@@ -3,7 +3,7 @@
     <!-- THE BOOK UPLOAD FORM -->
     <div class="book">
         <h2>Upload a book</h2>
-        <form action="" id="form">
+        <form action="" method="POST" enctype="multipart/form-data" id="form">
             <div class="input-box">
                 <input type="text" name="author" required />
                 <span>Title</span>
@@ -29,16 +29,22 @@
                     <th>Book file</th>
                     <th>Controls</th>
                 </tr>
+            {% if books %}
+            {% for book in books %}
                 <tr>
-                    <td>1</td>
-                    <td>Rich dad poor dad</td>
-                    <td>Robert Kiyosaki</td>
-                    <td><a href="#" id="file">Rich-dad-poor-dad.pdf</a></td>
+                    <td>{{book.id}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td><a href="{{url_for('static', filename='books/'+book.name)}}" id="file">{{book.title.lower().replace(" ","")}}.pdf</a></td>
                     <td>
-                        <a href="#" class="edit">Edit</a>
-                        <a href="#" class="del">Delete</a>
+                        <a href="{{url_for('edit_book', id=book.id)}}" class="edit">Edit</a>
+                        <a href="{{url_for('delete_book', id=book.id)}}" class="del">Delete</a>
                     </td>
                 </tr>
+            {% endfor %}
+            {% else %}
+                <h1>No Books Available Yet.</h1>
+            {% endif %}
             </table>
         </div>
     </div>

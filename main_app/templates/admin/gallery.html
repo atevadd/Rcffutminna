@@ -3,23 +3,23 @@
     <!-- THE GALLERY FORM -->
     <div class="gallery">
         <h2>Upload picture</h2>
-        <form action="" class="form">
+        <form action="" method="POST" enctype="multipart/form-data" class="form">
             <div class="input-box">
                 <label for="image file">Image file here</label>
-                <input type="file" name="image" multiple>
+                <input type="file" name="image" multiple required>
             </div>
             <div class="input-box">
                 <label for="">Tag</label>
                 <select name="tag" required>
                     <option value="Sunday service">Sunday service</option>
                     <option value="Thanksgiving service">Thanksgiving service</option>
-                    <option value="Thanksgiving service">FYB Sunday</option>
-                    <option value="Thanksgiving service">Freshers week </option>
+                    <option value="FYB Sunday">FYB Sunday</option>
+                    <option value="Freshers Week">Freshers week </option>
                 </select>
             </div>
             <div class="input-box">
                 <label for="image file">Date</label>
-                <input type="date" name="image">
+                <input type="date" name="date">
             </div>
             <button type="submit">Upload picture</button>
         </form>
@@ -34,16 +34,22 @@
                     <th>Date</th>
                     <th>Control</th>
                 </tr>
+                {% if galleries %}
+                {% for gallery in galleries %}
                 <tr>
-                    <td>1</td>
-                    <td>img-20032-2003-22.jpg</td>
-                    <td>Sunday service</td>
-                    <td>02/04/2020</td>
+                    <td>{{gallery.id}}</td>
+                    <td> <a href="{{url_for('static', filename='church_img/'+gallery.image)}}">View Image</a> </td>
+                    <td>{{gallery.tag}}</td>
+                    <td>{{gallery.date.strftime('%d-%m-%Y')}}</td>
                     <td>
-                        <a href="#" class="edit">Edit</a>
-                        <a href="#" class="del">Delete</a>
+                        <a href="{{url_for('edit_gallery', id=gallery.id)}}" class="edit">Edit</a>
+                        <a href="{{url_for('delete_gallery', id=gallery.id)}}" class="del">Delete</a>
                     </td>
                 </tr>
+                {% endfor %}
+                {% else %}
+                    <h1>No Gallery Uploaded Yet.</h1>
+                {% endif %}
             </table>
         </div>
     </div>
