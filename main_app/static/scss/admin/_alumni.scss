@@ -5,4 +5,26 @@
     border: 1px solid #aaaaaa;
     border-radius: 4px;
     padding: 20px 50px;
+
+    h1{
+        padding: 10px;
+        color: $dark-text-color;
+    }
+
+    .alumni{
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        border-radius: 4px;
+    }
+
+    tr,th,td{
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    th{
+        font-weight: 600;
+        font-size: 18px;
+    }
 }
